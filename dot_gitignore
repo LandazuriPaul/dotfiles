@@ -1,0 +1,59 @@
+# dotfiles tracking system #
+############################
+.dotfiles/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Linux generated files #
+#########################
+.directory
+.fuse_hidden*
+
+# Sublime Text generated files #
+################################
+*.sublime-workspace
+
+# Temp files #
+##############
+tmp/
+.next/
+*.*~
+.~lock.*
+
+# Compiled files #
+##################
+*.pyc
+build/
+dist/
+.sass-cache/
+
+# Log files #
+#############
+*.log
+logs/
+
+# Vendor files #
+################
+node_modules/
+bower_components/
+vendor/
+
+# Compressed files #
+####################
+*.tar.gz
+
+# Other ignored files #
+#######################
+.idea/
+private/
+README.html
+sftp-config.json
+
