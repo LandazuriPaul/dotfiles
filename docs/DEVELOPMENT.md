@@ -1,10 +1,30 @@
-# Development tools
+Development tools
+---
 
 Some development tools to complete the installation process.
 
-## CLI tools
+- [CLI Tools](#cli-tools)
+  - [General](#general)
+  - [Node.js](#nodejs)
+  - [Java](#java)
+  - [DevOps Tools](#devops-tools)
+- [Terminal Applications](#terminal-applications)
+  - [iTerm2](#iterm2)
+    - [Preferences](#preferences)
+    - [Shell integration features](#shell-integration-features)
+    - [Long-running commands](#long-running-commands)
+- [Editors and IDEs](#editors-and-ides)
+  - [Sublime Text](#sublime-text)
+  - [Visual Studio Code](#visual-studio-code)
+    - [Settings and extensions](#settings-and-extensions)
+    - [Fonts](#fonts)
+- [Other development tools](#other-development-tools)
+  - [Fork](#fork)
+  - [TablePlus](#tableplus)
 
-### General
+# CLI Tools
+
+## General
 
 1. Install the Xcode Command Line tools:
 
@@ -46,7 +66,7 @@ Some development tools to complete the installation process.
    brew install grep
    ```
 
-### Node.js
+## Node.js
 
 1. Install [nvm](https://github.com/nvm-sh/nvm), the Node.js version manager:
 
@@ -66,14 +86,14 @@ Some development tools to complete the installation process.
    curl -o- -L https://yarnpkg.com/install.sh | bash
    ```
 
-### Java
+## Java
 
 1. Install [jenv](https://www.jenv.be/), the Java version manager:
    ```sh
    brew install jenv
    ```
 
-### DevOps tools
+## DevOps Tools
 
 1. Install [kubectx](https://github.com/ahmetb/kubectx):
 
@@ -112,37 +132,37 @@ Some development tools to complete the installation process.
    brew install stern
    ```
 
-## Terminal applications
+# Terminal Applications
 
-### iTerm2
+## iTerm2
 
-#### Preferences
+### Preferences
 
 To be able to track the iTerm2 preference changes with this dotfiles repository, I configured iTerm2 to save the preferences to a custom folder: `~/.iterm2_profile`. This setting is accessible in iTerm2's preferences > General > Preferences.
 
-#### Shell integration features
+### Shell integration features
 
 It can be useful to run the iTerm2 integration script to enjoy all its features. In the main iTerm2 menu, launch `Install Shell Integration`.
 
-##### Long-running commands
+### Long-running commands
 
 When on a local session, you can use [iTerm2 shell integration](https://iterm2.com/documentation-shell-integration.html) feature called "Alert on next mark"
 
 When on a remote session, I use a little trick inspired by [this SuperUser answer](https://superuser.com/a/1165272): whenever I want to be notified at the end of a long-running command, I append ` ; echo -e '\a'` at the end of the command. To do this as seamlessly as possible, I attached this action to a custom iTerm2 shortcut: `opt+a`.
 
-## Editors and IDEs
+# Editors and IDEs
 
-### Sublime Text
+## Sublime Text
 
 [Sublime Text](https://www.sublimetext.com/) is a very lightweight and efficient editor.
 
-### VS Code
+## Visual Studio Code
 
-#### Settings and extensions
+### Settings and extensions
 
 Once [VS Code](https://code.visualstudio.com/) is installed, first login with GitHub to be able to sync you settings.
 
-#### Fonts
+### Fonts
 
 FiraCode font for some nice ligature features:
 
@@ -151,12 +171,12 @@ brew tap homebrew/cask-fonts
 brew install font-fira-code
 ```
 
-## Other development tools
+# Other development tools
 
-### Fork
+## Fork
 
 [Fork](https://git-fork.com/) is a fast and friendly git GUI.
 
-### TablePlus
+## TablePlus
 
 [TablePlus](https://tableplus.com/) is a friendly GUI for relational databases.
