@@ -3,11 +3,11 @@ alias cm="chezmoi"
 
 # General aliases
 alias git='LANG=en_GB.UTF-8 git'
-alias ..='cd ..'
+{{- if eq .chezmoi.os "darwin" }}
 alias ll='ls -lAhFGW'
-alias top='htop'
-alias md='mkdir'
-alias otop='/usr/bin/top'
+{{- else if eq .chezmoi.os "linux" }}
+alias ll='ls -lAhFG'
+{{- end }}
 alias nv='nvim'
 
 # Mac specifics
