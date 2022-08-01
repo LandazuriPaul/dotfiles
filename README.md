@@ -9,3 +9,32 @@ See the [docs](./docs/) directory for some documentation:
 - [DEVELOPMENT](./docs/DEVELOPMENT.md): For development installations.
 - [UTILITIES](./docs/UTILITIES.md): For utilities installations.
 - [USEFUL_COMMANDS](./docs/USEFUL_COMMANDS.md): For random but useful commands.
+
+
+## TODO
+
+### Installation
+
+Current steps to be automated:
+
+1. Install `zsh`
+2. Change default shell to `zsh`
+    ```shell
+    chsh -s $(which zsh)
+    ```
+3. Install `oh-my-zsh`
+    ```shell
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
+4. Install `powerlevel10k`
+    ```shell
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    ```
+5. Install `zsh-autosuggestions`
+    ```shell
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    ```
+6. Install `zsh-syntax-highlighting`
+   ```shell
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+   ```
