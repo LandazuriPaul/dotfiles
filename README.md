@@ -18,6 +18,9 @@ See the [docs](./docs/) directory for some documentation:
 Current steps to be automated:
 
 1. Install `zsh`
+    ```shell
+    sudo apt-get install zsh
+    ```
 2. Change default shell to `zsh`
     ```shell
     chsh -s $(which zsh)
@@ -37,4 +40,13 @@ Current steps to be automated:
 6. Install `zsh-syntax-highlighting`
    ```shell
    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+   ```
+7. Install `z`
+   ```shell
+   git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
+   ```
+8. Install `fzf`
+   ```shell
+   sudo apt-get install fzf
+   .fzf/install
    ```
