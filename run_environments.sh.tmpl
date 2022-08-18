@@ -2,7 +2,7 @@
 
 # Vivacity
 {{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
-cat <<EOT >>~/.secrets/environment.sh
+cat <<EOT >~/.secrets/environment.sh
 {{ onepasswordRead "op://private/shell-environment/vivacity_environment.sh" "vivacitylabs.1password.com" }}
 EOT
 {{- end }}
