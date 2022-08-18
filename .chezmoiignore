@@ -1,3 +1,7 @@
 # Documnentation
 docs/
 **/*.md
+
+# IDEs
+.idea/
+.vscode/
