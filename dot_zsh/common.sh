@@ -1,6 +1,3 @@
-# Node environment
-source ~/.zsh/nvm.sh
-
 # kubectl completion
 source <(kubectl completion zsh)
 
