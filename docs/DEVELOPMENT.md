@@ -122,6 +122,11 @@ Some development tools to complete the installation process.
    download [Cloud SDK package](https://cloud.google.com/sdk/docs/quickstart-macos) and place it in `$HOME/scripts` (
    according to the current `.zshrc` configuration).
 
+    Also, if you want to work with GKE, you need to install the GKE plugin:
+    ```shell
+   gcloud components install gke-gcloud-auth-plugin 
+   ```
+
 4. Install [Terraform](https://www.terraform.io/):
 
    ```sh
