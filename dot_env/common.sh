@@ -30,11 +30,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# Homebrew
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# PostgreSQL utils (libpq)
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # Kubectl
 source "$HOME/.env/kubeconfig.sh"
-
-# PostgreSQL utils (libpq)
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
