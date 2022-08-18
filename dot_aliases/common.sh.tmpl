@@ -10,17 +10,9 @@ alias ll='ls -lAhFG'
 {{- end }}
 alias nv='nvim'
 
-# Mac specifics
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES;killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-# Network
-alias flush-dns='sudo killall -HUP mDNSResponder'
-
-# PC specifics
+# Dev specifics
 alias tmp='cd ~/dev/tmp/'
 alias dev='cd ~/dev/'
-alias utils='cd ~/dev/utils/'
 
 # Yarn
 alias yb='yarn build'
@@ -40,5 +32,14 @@ alias nb='npm run build'
 alias kb='kubectl'
 alias kc='kubectx'
 alias tf='terraform'
-alias tf='terraform'
 alias dc='docker-compose'
+
+# Darwin
+{{- if eq .chezmoi.os "darwin" }}
+source ~/.aliases/darwin.sh
+{{- end }}
+
+# Vivacity
+{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+source ~/.aliases/vivacity.sh
+{{- end }}
