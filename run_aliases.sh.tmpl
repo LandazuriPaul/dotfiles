@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Vivacity
+{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+cat <<EOT >>~/.aliases/vivacity.sh
+{{ onepasswordRead "op://private/shell-aliases/vivacity_aliases.sh" "vivacitylabs.1password.com" }}
+EOT
+{{- end }}
+
+# MyFoodCourt
+{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+cat <<EOT >>~/.aliases/mfc.sh
+{{ onepasswordRead "op://private/shell-aliases/myfoodcourt_aliases.sh" "my.1password.com" }}
+EOT
+{{- end }}
+
+# Personal
+{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+cat <<EOT >>~/.aliases/mfc.sh
+{{ (bitwarden "item" "shell-aliases").notes }}
+EOT
+{{- end }}
