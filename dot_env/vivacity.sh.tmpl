@@ -9,8 +9,10 @@ export REPOS="$HOME/dev/vivacitylabs"
 {{- end }}
 
 # jEnv integration
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+if [ -x "$(command -v jenv)" ]; then
+    export PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
+fi
 
 # gcloud <> GKE integration
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
