@@ -51,10 +51,12 @@ Current steps to be automated:
    .fzf/install
    ```
    
-9. Install `1Password CLI`:
+9. Install [1Password8](https://1password.com/downloads) and `1Password CLI`:
    ```shell
    brew install --cask 1password/tap/1password-cli
    ```
+   In 1Password8 settings, enable TouchID (in `security`) and `Biometric unlock for 1Password CLI` (in `developer`).
+
 
 10. Install `Bitwarden CLI`:
    ```shell
