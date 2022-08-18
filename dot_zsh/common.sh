@@ -8,9 +8,9 @@ if [ -f "${HOME}/.local/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/.local
 if [ -f "${HOME}/.local/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/.local/google-cloud-sdk/completion.zsh.inc"; fi
 
 # Terraform completion
-if [ -f '/usr/local/bin/terraform' ]; then
+if [ -x "$(command -v terraform)" ]; then
   autoload -U +X bashcompinit && bashcompinit
-  complete -o nospace -C /usr/local/bin/terraform terraform
+  complete -o nospace -C terraform terraform
 fi
 
 # Stern completion
