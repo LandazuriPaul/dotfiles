@@ -50,3 +50,13 @@ Current steps to be automated:
    sudo apt-get install fzf
    .fzf/install
    ```
+   
+9. Install `1Password CLI`:
+   ```shell
+   brew install --cask 1password/tap/1password-cli
+   ```
+
+10. Install `Bitwarden CLI`:
+   ```shell
+   brew install bitwarden-cli
+   ```
