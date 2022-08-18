@@ -1,0 +1,19 @@
+# Go
+export GOPRIVATE="github.com/vivacitylabs/*"
+
+# Vivacity repos
+{{- if eq .chezmoi.hostname "blastoise" }}
+export REPOS="$HOME/dev/GitHub/vivacitylabs"
+{{- else if eq .chezmoi.hostname "pc-vivacity-pl"  }}
+export REPOS="$HOME/dev/vivacitylabs"
+{{- end }}
+
+# jEnv integration
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# gcloud <> GKE integration
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# Vault
+export VAULT_HELPER=true

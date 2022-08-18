@@ -35,3 +35,8 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # Kubectl
 source "$HOME/.env/kubeconfig.sh"
+
+# Vivacity
+{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+[ -f ~/.env/vivacity.sh ] && source ~/.env/vivacity.sh
+{{- end }}
