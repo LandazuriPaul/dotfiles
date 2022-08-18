@@ -4,23 +4,23 @@ Development tools
 Some development tools to complete the installation process.
 
 - [CLI Tools](#cli-tools)
-  - [General](#general)
-  - [Node.js](#nodejs)
-  - [Java](#java)
-  - [DevOps Tools](#devops-tools)
+    - [General](#general)
+    - [Node.js](#nodejs)
+    - [Java](#java)
+    - [DevOps Tools](#devops-tools)
 - [Terminal Applications](#terminal-applications)
-  - [iTerm2](#iterm2)
-    - [Preferences](#preferences)
-    - [Shell integration features](#shell-integration-features)
-    - [Long-running commands](#long-running-commands)
+    - [iTerm2](#iterm2)
+        - [Preferences](#preferences)
+        - [Shell integration features](#shell-integration-features)
+        - [Long-running commands](#long-running-commands)
 - [Editors and IDEs](#editors-and-ides)
-  - [Sublime Text](#sublime-text)
-  - [Visual Studio Code](#visual-studio-code)
-    - [Settings and extensions](#settings-and-extensions)
-    - [Fonts](#fonts)
+    - [Sublime Text](#sublime-text)
+    - [Visual Studio Code](#visual-studio-code)
+        - [Settings and extensions](#settings-and-extensions)
+        - [Fonts](#fonts)
 - [Other development tools](#other-development-tools)
-  - [Fork](#fork)
-  - [TablePlus](#tableplus)
+    - [Fork](#fork)
+    - [TablePlus](#tableplus)
 
 # CLI Tools
 
@@ -38,7 +38,8 @@ Some development tools to complete the installation process.
    brew install neovim
    ```
 
-3. Install [vim-plug](https://github.com/junegunn/vim-plug) for both vim and neovim following the official [installation instructions](https://github.com/junegunn/vim-plug#installation).
+3. Install [vim-plug](https://github.com/junegunn/vim-plug) for both vim and neovim following the
+   official [installation instructions](https://github.com/junegunn/vim-plug#installation).
 
 4. Install [yq](https://github.com/kislyuk/yq):
 
@@ -60,7 +61,8 @@ Some development tools to complete the installation process.
    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
    ```
 
-7. `grep`: Since some commands we use use the GNU grep and the macOS one isn’t entirely compatible with it, it can be useful to install the GNU one. Then this specific grep is available via `ggrep`:
+7. `grep`: Since some commands we use use the GNU grep and the macOS one isn’t entirely compatible with it, it can be
+   useful to install the GNU one. Then this specific grep is available via `ggrep`:
 
    ```sh
    brew install grep
@@ -74,13 +76,16 @@ Some development tools to complete the installation process.
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
    ```
 
-   Once the installation is complete, you can install the latest node version. This way you will be able to check that the next install - yarn - has been successfully installed:
+   Once the installation is complete, you can install the latest node version. This way you will be able to check that
+   the next install - yarn - has been successfully installed:
 
    ```sh
    nvm install node
    ```
 
-2. Install [Yarn](https://classic.yarnpkg.com/), an efficient Node.js package manager. In order to avoid installing a global Node.js version at the same time, avoid installing Yarn via Homebrew. You would rather want to install it directly via the install script:
+2. Install [Yarn](https://classic.yarnpkg.com/), an efficient Node.js package manager. In order to avoid installing a
+   global Node.js version at the same time, avoid installing Yarn via Homebrew. You would rather want to install it
+   directly via the install script:
 
    ```sh
    curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -95,42 +100,61 @@ Some development tools to complete the installation process.
 
 ## DevOps Tools
 
-1. Install [kubectx](https://github.com/ahmetb/kubectx):
+1. Install the [Kubernetes](https://kubernetes.io/) CLI tool, `kubectl`:
+
+    ```sh
+    brew install kubernetes-cli
+    ```
+
+2. Install [kubectx](https://github.com/ahmetb/kubectx):
 
    ```sh
    brew install kubectx
    ```
 
-2. Install [Google Cloud SDK](https://cloud.google.com/sdk/):
+3. Install [Google Cloud SDK](https://cloud.google.com/sdk/):
 
    ```sh
    brew install google-cloud-sdk
    ```
 
-   If you want to add the `gcloud` completion, you will need to download [Cloud SDK package](https://cloud.google.com/sdk/docs/quickstart-macos) and place it in `$HOME/scripts` (according to the current `.zshrc` configuration).
+   If you want to add the `gcloud` completion, you will need to
+   download [Cloud SDK package](https://cloud.google.com/sdk/docs/quickstart-macos) and place it in `$HOME/scripts` (
+   according to the current `.zshrc` configuration).
 
-3. Install [Terraform](https://www.terraform.io/):
+4. Install [Terraform](https://www.terraform.io/):
 
    ```sh
    brew install terraform
    ```
 
-4. Install [Watch](https://formulae.brew.sh/formula/watch): Command line tool to run periodically a program and has its output upadted.
+5. Install [Watch](https://formulae.brew.sh/formula/watch): Command line tool to run periodically a program and has its
+   output upadted.
 
    ```sh
    brew install watch
    ```
 
-5. Install [k9s](https://k9scli.io/):
+6. Install [k9s](https://k9scli.io/):
 
    ```sh
    brew install k9s
    ```
 
-6. Install [stern](https://github.com/wercker/stern):
+7. Install [stern](https://github.com/wercker/stern):
    ```sh
    brew install stern
    ```
+
+8. Install [jq](https://stedolan.github.io/jq/):
+    ```shell
+    brew install jq
+    ```
+
+9. Install [yq](https://mikefarah.gitbook.io/yq/):
+    ```shell
+    brew install yq
+    ```
 
 # Terminal Applications
 
@@ -138,17 +162,23 @@ Some development tools to complete the installation process.
 
 ### Preferences
 
-To be able to track the iTerm2 preference changes with this dotfiles repository, I configured iTerm2 to save the preferences to a custom folder: `~/.iterm2_profile`. This setting is accessible in iTerm2's preferences > General > Preferences.
+To be able to track the iTerm2 preference changes with this dotfiles repository, I configured iTerm2 to save the
+preferences to a custom folder: `~/.iterm2_profile`. This setting is accessible in iTerm2's preferences > General >
+Preferences.
 
 ### Shell integration features
 
-It can be useful to run the iTerm2 integration script to enjoy all its features. In the main iTerm2 menu, launch `Install Shell Integration`.
+It can be useful to run the iTerm2 integration script to enjoy all its features. In the main iTerm2 menu,
+launch `Install Shell Integration`.
 
 ### Long-running commands
 
-When on a local session, you can use [iTerm2 shell integration](https://iterm2.com/documentation-shell-integration.html) feature called "Alert on next mark"
+When on a local session, you can use [iTerm2 shell integration](https://iterm2.com/documentation-shell-integration.html)
+feature called "Alert on next mark"
 
-When on a remote session, I use a little trick inspired by [this SuperUser answer](https://superuser.com/a/1165272): whenever I want to be notified at the end of a long-running command, I append ` ; echo -e '\a'` at the end of the command. To do this as seamlessly as possible, I attached this action to a custom iTerm2 shortcut: `opt+a`.
+When on a remote session, I use a little trick inspired by [this SuperUser answer](https://superuser.com/a/1165272):
+whenever I want to be notified at the end of a long-running command, I append ` ; echo -e '\a'` at the end of the
+command. To do this as seamlessly as possible, I attached this action to a custom iTerm2 shortcut: `opt+a`.
 
 # Editors and IDEs
 

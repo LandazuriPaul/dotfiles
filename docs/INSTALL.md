@@ -69,12 +69,6 @@ In order to have an operational system to develop, here is an sorted list of ins
 
 11. Install [Docker](https://www.docker.com/) following this [link](https://download.docker.com/mac/stable/Docker.dmg).
 
-12. Install the [Kubernetes](https://kubernetes.io/) CLI tool, `kubectl`:
-
-    ```sh
-    brew install kubernetes-cli
-    ```
-
 ---
 
 ## Extra steps
