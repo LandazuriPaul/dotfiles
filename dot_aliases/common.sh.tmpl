@@ -34,6 +34,9 @@ alias kc='kubectx'
 alias tf='terraform'
 alias dc='docker-compose'
 
+# Personal
+[ -f ~/.aliases/personal.sh ] && source ~/.aliases/personal.sh
+
 {{ if eq .chezmoi.os "darwin" -}}
 # Darwin
 [ -f ~/.aliases/darwin.sh ] && source ~/.aliases/darwin.sh
@@ -47,9 +50,4 @@ alias dc='docker-compose'
 {{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
 # MyFoodCourt
 [ -f ~/.aliases/mfc.sh ] && source ~/.aliases/mfc.sh
-{{- end }}
-
-{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
-# Personal
-[ -f ~/.aliases/personal.sh ] && source ~/.aliases/personal.sh
 {{- end }}
