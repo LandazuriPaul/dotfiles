@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Kubeconfig
+{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+
+# default
+cat <<EOF >~/.kube/config
+{{ onepasswordRead "op://private/kubeconfig/config" "vivacitylabs.1password.com" }}
+EOF
+
+# vivacity.yaml
+cat <<EOF >~/.kube/configs/vivacity.yaml
+{{ onepasswordRead "op://private/kubeconfig/config" "vivacitylabs.1password.com" }}
+EOF
+{{- end }}
