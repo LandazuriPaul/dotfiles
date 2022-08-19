@@ -42,12 +42,12 @@ alias dc='docker-compose'
 [ -f ~/.aliases/darwin.sh ] && source ~/.aliases/darwin.sh
 {{- end }}
 
-{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+{{- if eq .hostname "pc-vivacity-pl" "blastoise" }}
 # Vivacity
 [ -f ~/.aliases/vivacity.sh ] && source ~/.aliases/vivacity.sh
 {{- end }}
 
-{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+{{- if eq .hostname "pc-vivacity-pl" "blastoise" }}
 # MyFoodCourt
 [ -f ~/.aliases/mfc.sh ] && source ~/.aliases/mfc.sh
 {{- end }}

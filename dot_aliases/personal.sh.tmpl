@@ -1,7 +1,7 @@
-{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" -}}
+{{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
 {{ (bitwarden "item" "laptop-aliases").notes }}
 {{- end }}
 
-{{- if eq .chezmoi.hostname "pikachu" -}}
+{{- if eq .hostname "pikachu" -}}
 {{ (bitwarden "item" "vps-aliases").notes }}
 {{- end }}

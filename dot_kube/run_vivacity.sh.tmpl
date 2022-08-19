@@ -1,9 +1,9 @@
-{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" -}}
+{{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
 
 #!/bin/sh
 
 # Kubeconfig
-{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+{{- if eq .hostname "pc-vivacity-pl" "blastoise" }}
 
 # default
 cat <<EOF >~/.kube/config

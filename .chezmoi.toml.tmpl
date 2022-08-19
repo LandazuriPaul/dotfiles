@@ -1,2 +1,10 @@
 [onepassword]
     prompt = false
+[data]
+    # This is a workaround for the
+    # hostname not being correctly read in Ubuntu
+{{- $hostname := .chezmoi.hostname -}}
+{{- if eq .chezmoi.os "linux" -}}
+    {{ $hostname = output "hostname" -}}
+{{- end }}
+    hostname = "{{ $hostname }}"
