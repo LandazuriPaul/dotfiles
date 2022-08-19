@@ -3,7 +3,6 @@
 #!/bin/sh
 
 # Kubeconfig
-{{- if eq .hostname "pc-vivacity-pl" "blastoise" }}
 
 # default
 cat <<EOF >~/.kube/config
@@ -14,6 +13,5 @@ EOF
 cat <<EOF >~/.kube/configs/vivacity.yaml
 {{ onepasswordRead "op://private/kubeconfig/config" "vivacitylabs.1password.com" }}
 EOF
-{{- end }}
 
 {{- end -}}

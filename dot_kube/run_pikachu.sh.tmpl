@@ -1,0 +1,10 @@
+{{- if eq .hostname "blastoise" "pikachu" -}}
+
+#!/bin/sh
+
+# Kubeconfig
+cat <<EOF >~/.kube/configs/pikachu.yaml
+{{ (bitwarden "item" "pikachu-kubeconfig").notes }}
+EOF
+
+{{- end -}}
