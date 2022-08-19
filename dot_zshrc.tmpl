@@ -116,11 +116,11 @@ fi
 setopt no_bare_glob_qual
 setopt extended_glob
 
-# Use the bash aliases
-source ~/.bash_aliases
-
 # Use the bash profile
 source ~/.bash_profile
+
+# Use the bash aliases
+source ~/.bash_aliases
 
 # Homebrew on M1 CPU fix
 {{- if eq .chezmoi.os "darwin" }}
