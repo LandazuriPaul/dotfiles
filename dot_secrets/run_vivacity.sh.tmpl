@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Terraform secret key
+{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+KEY_FILENAME={{ onepasswordRead "op://private/terraform-secret-key/filename" "vivacitylabs.1password.com" }}
+cat <<EOT >~/.secrets/$KEY_FILENAME
+{{ onepasswordRead "op://private/terraform-secret-key/key.json" "vivacitylabs.1password.com" }}
+EOT
+{{- end }}
+
+# Terraform state key
+{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" }}
+KEY_FILENAME={{ onepasswordRead "op://private/terraform-state-key/filename" "vivacitylabs.1password.com" }}
+cat <<EOT >~/.secrets/$KEY_FILENAME
+{{ onepasswordRead "op://private/terraform-state-key/key.txt" "vivacitylabs.1password.com" }}
+EOT
+{{- end }}
