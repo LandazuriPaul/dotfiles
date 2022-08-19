@@ -1,0 +1,3 @@
+{{- if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" -}}
+{{ (bitwarden "item" "shell-aliases").notes }}
+{{- end }}
