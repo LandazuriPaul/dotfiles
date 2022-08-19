@@ -1,2 +1,4 @@
+{{- if eq .chezmoi.os "darwin" -}}
 # Network
 alias flush-dns='sudo killall -HUP mDNSResponder'
+{{- end -}}
