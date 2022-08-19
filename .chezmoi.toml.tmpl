@@ -5,6 +5,6 @@
     # hostname not being correctly read in Ubuntu
 {{- $hostname := .chezmoi.hostname -}}
 {{- if eq .chezmoi.os "linux" -}}
-    {{ $hostname = output "hostname" -}}
+    {{ $hostname = output "hostname" | trim -}}
 {{- end }}
     hostname = "{{ $hostname }}"
