@@ -1,6 +1,6 @@
 {{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
 
-#!/bin/sh
+#!/bin/bash
 
 # Terraform secret key
 KEY_FILENAME={{ onepasswordRead "op://private/terraform-secret-key/filename" "vivacitylabs.1password.com" }}

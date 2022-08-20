@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Bitwarden
+
+# from https://gist.github.com/bendem/edf6cdf37aabf659ddbb0f77d9b50e2f
+unlock() {
+    bw unlock | sed -nE 's/\$ export BW_SESSION="(.*)"/\1/p'
+}
+
+echo "> Log in to Bitwarden"
+export BW_SESSION="$(unlock)"
+
+# 1Password
+echo "> Log in to 1Password"
+eval $(op signin --account my.1password.com)
+
+{{ if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" -}}
+eval $(op signin --account vivacitylabs.1password.com)
+{{- end }}

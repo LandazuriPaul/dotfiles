@@ -1,6 +1,6 @@
 {{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
 
-#!/bin/sh
+#!/bin/bash
 
 cat <<EOT >~/.aliases/vivacity.sh
 {{ onepasswordRead "op://private/shell-aliases/vivacity_aliases.sh" "vivacitylabs.1password.com" }}
