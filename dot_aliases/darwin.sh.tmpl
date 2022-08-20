@@ -1,4 +1,7 @@
 {{- if eq .chezmoi.os "darwin" -}}
+# ls
+alias ll='ls -lAhFGW'
+
 # Network
 alias flush-dns='sudo killall -HUP mDNSResponder'
 {{ end -}}

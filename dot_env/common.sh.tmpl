@@ -32,11 +32,3 @@ fi
 
 # PostgreSQL utils (libpq)
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-
-# Kubectl
-source "$HOME/.env/kubeconfig.sh"
-
-{{ if eq .hostname "pc-vivacity-pl" "blastoise" -}}
-# Vivacity
-[ -f ~/.env/vivacity.sh ] && source ~/.env/vivacity.sh
-{{- end }}
