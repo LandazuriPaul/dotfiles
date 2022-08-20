@@ -1,3 +1,7 @@
 {{- if eq .chezmoi.os "linux" -}}
+# ls
 alias ll='ls -lAhFG'
+
+# Chezmoi
+alias cmlogin='bw unlock && eval $(op signin)'
 {{ end -}}
