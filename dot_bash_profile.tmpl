@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Load common environment variables
-source ~/.env/common.sh
+source ~/.shell/env/common.sh
 
 {{ if eq .hostname "pc-vivacity-pl" "blastoise" -}}
 # Vivacity
-[ -f ~/.env/vivacity.sh ] && source ~/.env/vivacity.sh
+[ -f ~/.shell/env/vivacity.sh ] && source ~/.shell/env/vivacity.sh
 {{- end }}
 
 # Kube configs
 [ -f ~/.kube/env.sh ] && source ~/.kube/env.sh
 
 # Load secrets as environment variables
-[ -f ~/.secrets/env.sh ] && source ~/.secrets/env.sh
+[ -f ~/.shell/secrets/env.sh ] && source ~/.shell/secrets/env.sh
 
 # Load local environment variables
-[ -f ~/.env/local.sh ] && source ~/.env/local.sh
+[ -f ~/.shell/env/local.sh ] && source ~/.shell/env/local.sh

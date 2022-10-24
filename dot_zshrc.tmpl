@@ -122,6 +122,9 @@ source ~/.bash_profile
 # Use the bash aliases
 source ~/.bash_aliases
 
+# Use the bash functions
+source ~/.bash_functions
+
 # Homebrew on M1 CPU fix
 {{- if eq .chezmoi.os "darwin" }}
 eval $(/opt/homebrew/bin/brew shellenv)
@@ -134,4 +137,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Other shell integrations
-source ~/.zsh/shell_integration.sh
+source ~/.zsh_integrations.sh

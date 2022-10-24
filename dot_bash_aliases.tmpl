@@ -1,26 +1,26 @@
 # Load common aliases
-source ~/.aliases/common.sh
+source ~/.shell/aliases/common.sh
 
 # Personal
-[ -f ~/.aliases/personal.sh ] && source ~/.aliases/personal.sh
+[ -f ~/.shell/aliases/personal.sh ] && source ~/.shell/aliases/personal.sh
 
 {{ if eq .chezmoi.os "darwin" -}}
 # Darwin
-[ -f ~/.aliases/darwin.sh ] && source ~/.aliases/darwin.sh
+[ -f ~/.shell/aliases/darwin.sh ] && source ~/.shell/aliases/darwin.sh
 {{- end }}
 
 {{ if eq .chezmoi.os "linux" -}}
 # Linux
-[ -f ~/.aliases/linux.sh ] && source ~/.aliases/linux.sh
+[ -f ~/.shell/aliases/linux.sh ] && source ~/.shell/aliases/linux.sh
 {{- end }}
 
 {{ if eq .hostname "pc-vivacity-pl" "blastoise" -}}
 # Vivacity
-[ -f ~/.aliases/vivacity.sh ] && source ~/.aliases/vivacity.sh
+[ -f ~/.shell/aliases/vivacity.sh ] && source ~/.shell/aliases/vivacity.sh
 
 # MyFoodCourt
-[ -f ~/.aliases/mfc.sh ] && source ~/.aliases/mfc.sh
+[ -f ~/.shell/aliases/mfc.sh ] && source ~/.shell/aliases/mfc.sh
 {{- end }}
 
 # Load local aliases
-[ -f ~/.aliases/local.sh ] && source ~/.aliases/local.sh
+[ -f ~/.shell/aliases/local.sh ] && source ~/.shell/aliases/local.sh

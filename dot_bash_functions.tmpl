@@ -1,0 +1,7 @@
+{{ if eq .hostname "pc-vivacity-pl" "blastoise" -}}
+# Vivacity
+[ -f ~/.shell/functions/vivacity.sh ] && source ~/.shell/functions/vivacity.sh
+{{- end }}
+
+# Load local functions
+[ -f ~/.shell/functions/local.sh ] && source ~/.shell/functions/local.sh
