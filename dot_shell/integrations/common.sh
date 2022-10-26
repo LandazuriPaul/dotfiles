@@ -2,7 +2,7 @@
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 # Pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
+if [ -x "$(command -v pyenv)" ]; then
   eval "$(pyenv init -)"
 fi
 
@@ -17,7 +17,9 @@ fi
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # kubectl completion
-source <(kubectl completion zsh)
+if [ -x "$(command -v kubectl)" ]; then
+  source <(kubectl completion zsh)
+fi
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "${HOME}/.local/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/.local/google-cloud-sdk/path.zsh.inc"; fi
@@ -32,4 +34,6 @@ if [ -x "$(command -v terraform)" ]; then
 fi
 
 # Stern completion
-source <(stern --completion=zsh)
+if [ -x "$(command -v kubectl)" ]; then
+  source <(stern --completion=zsh)
+fi
