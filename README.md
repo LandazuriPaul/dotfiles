@@ -57,7 +57,6 @@ Current steps to be automated:
    ```
    In 1Password8 settings, enable TouchID (in `security`) and `Biometric unlock for 1Password CLI` (in `developer`).
 
-
 10. Install `Bitwarden CLI`:
    ```shell
    brew install bitwarden-cli

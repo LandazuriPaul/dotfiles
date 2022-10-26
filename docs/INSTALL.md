@@ -5,7 +5,7 @@ In order to have an operational system to develop, here is an sorted list of ins
 1. Generate a new SSH key:
 
    ```sh
-   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ssh-keygen -t ed25519 -C "your_email@example.com"
    ```
 
    And register it in your GitHub account, in your [SSH settings](https://github.com/settings/keys).
