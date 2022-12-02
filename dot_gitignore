@@ -1,9 +1,7 @@
-# dotfiles tracking system #
-############################
-.dotfiles/
+### Project specific files
+supermario-dynamic-arm64v8.go
 
-# OS generated files #
-######################
+### OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -12,48 +10,39 @@
 ehthumbs.db
 Thumbs.db
 
-# Linux generated files #
-#########################
+### Linux generated files
 .directory
 .fuse_hidden*
 
-# Sublime Text generated files #
-################################
+### Sublime Text generated files
 *.sublime-workspace
 
-# Temp files #
-##############
+### Temp files
 tmp/
 .next/
 *.*~
 .~lock.*
 
-# Compiled files #
-##################
+### Compiled files
 *.pyc
 build/
 dist/
 .sass-cache/
 
-# Log files #
-#############
+### Log files
 *.log
 logs/
 
-# Vendor files #
-################
+### Vendor files
 node_modules/
 bower_components/
 vendor/
 
-# Compressed files #
-####################
+### Compressed files
 *.tar.gz
 
-# Other ignored files #
-#######################
+### Other ignored files
 .idea/
 private/
 README.html
 sftp-config.json
-
