@@ -10,6 +10,11 @@
 
 - [Rectangle](https://rectangleapp.com/): Move and resize windows in macOS using keyboard shortcuts or snap areas.
 
+- [UnnaturalScrollWheels](https://github.com/ther0n/UnnaturalScrollWheels): Decouple trackpad and mouse wheel scrolling directions. 
+  ```shell
+  brew install --cask unnaturalscrollwheels
+  ```
+
 - [Flycut](https://apps.apple.com/us/app/flycut-clipboard-manager/id442160987?mt=12): A macOS clipboard manager.
 
 - [AppCleaner](https://freemacsoft.net/appcleaner/): A small app to properly remove apps.
