@@ -8,16 +8,22 @@ Here is a collection of useful commands which are rarely run, but quite handy :)
 
 Here is how you can change the default directory for your screenshots:
 
-```sh
+```shell
 mkdir -p ~/Pictures/Screenshots/ # Create the screenshot directory
 defaults write com.apple.screencapture location ~/Pictures/Screenshots # Define your new directory as the screenshot destination
+```
+
+### Dock hiding delay
+
+```shell
+defaults write com.apple.dock autohide-delay -float 0; defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
 ```
 
 ### TouchID for `sudo` commands
 
 To be able to use TouchID for `sudo` commands, add this line to the `/etc/pam.d/sudo` file: `auth sufficient pam_tid.so`
 
-```sh
+```shell
 sudo vi /etc/pam.d/sudo
 
 # paste this line
