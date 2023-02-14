@@ -1,0 +1,3 @@
+{{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
+{{ onepasswordRead "op://private/gpg-conf/gpg.conf" "vivacitylabs.1password.com" }}
+{{- end }}
