@@ -2,19 +2,24 @@
 
 - [Raycast](https://www.raycast.com/): « Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks, calculate, share common links, and much more. »
 
-- [Choosy](https://www.choosyosx.com/): « Opens every link in the right browser. » OR
+- [Choosy*](https://www.choosyosx.com/): « Opens every link in the right browser. » OR
 
 - [Velja](https://apps.apple.com/us/app/velja/id1607635845): « Open links in a specific browser or a matching native app. Easily switch between browsers. »
 
 - [f.lux](https://justgetflux.com/): Adapt your screen to your light environment.
 
-- [Bartender](https://www.macbartender.com/): Help organise the mac menu bar icons.
+- [Bartender*](https://www.macbartender.com/): Help organise the mac menu bar icons.
 
-- [iStats Menus](https://bjango.com/mac/istatmenus/): Easily monitor the macOS system from the menu bar.
+- [iStats Menus*](https://bjango.com/mac/istatmenus/): Easily monitor the macOS system from the menu bar.
 
-- [Rectangle](https://rectangleapp.com/): Move and resize windows in macOS using keyboard shortcuts or snap areas.
+- [Stats**](https://github.com/exelban/stats): macOS system monitor in your menu bar.
+  ```shell
+  brew install stats
+  ```
 
-- [UnnaturalScrollWheels](https://github.com/ther0n/UnnaturalScrollWheels): Decouple trackpad and mouse wheel scrolling directions. 
+- [Rectangle**](https://rectangleapp.com/): Move and resize windows in macOS using keyboard shortcuts or snap areas.
+
+- [UnnaturalScrollWheels**](https://github.com/ther0n/UnnaturalScrollWheels): Decouple trackpad and mouse wheel scrolling directions. 
   ```shell
   brew install --cask unnaturalscrollwheels
   ```
@@ -29,7 +34,12 @@
 
 - [Convertos](https://apps.apple.com/us/app/convertos-unit-converter-widget/id933651245?ls=1&mt=12): Unit converter in the Notification Center
 
-- [Gitify](https://www.gitify.io/): A menubar application to be notified on GitHub notifications.
+- [Gitify**](https://www.gitify.io/): A menubar application to be notified on GitHub notifications.
   ```sh
   brew cask install gitify
   ```
+
+---
+[*]: Paid applications
+
+[**]: Open Source applications
