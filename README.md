@@ -10,7 +10,6 @@ See the [docs](./docs/) directory for some documentation:
 - [UTILITIES](./docs/UTILITIES.md): For utilities installations.
 - [USEFUL_COMMANDS](./docs/USEFUL_COMMANDS.md): For random but useful commands.
 
-
 ## TODO
 
 ### Installation
@@ -50,7 +49,7 @@ Current steps to be automated:
    sudo apt-get install fzf
    .fzf/install
    ```
-   
+
 9. Install [1Password8](https://1password.com/downloads) and `1Password CLI`:
    ```shell
    brew install --cask 1password/tap/1password-cli
