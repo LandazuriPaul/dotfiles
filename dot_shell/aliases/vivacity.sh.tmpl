@@ -1,0 +1,6 @@
+{{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
+
+#!/bin/bash
+{{ onepasswordRead "op://private/shell-aliases/vivacity_aliases.sh" "vivacitylabs.1password.com" | replace "$REPOS" (env "REPOS") }}
+
+{{- end }}

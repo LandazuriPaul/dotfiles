@@ -1,9 +1,0 @@
-{{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
-
-#!/bin/bash
-
-cat <<EOT >~/.shell/aliases/vivacity.sh
-{{ onepasswordRead "op://private/shell-aliases/vivacity_aliases.sh" "vivacitylabs.1password.com" }}
-EOT
-
-{{- end }}
