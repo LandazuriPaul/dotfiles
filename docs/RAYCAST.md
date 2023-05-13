@@ -87,5 +87,5 @@ Handy util to change the case of text held in the clipboard. The result is pushe
 
 If you have installed Python via `pyenv`, you might to create a symbolic link to your current Python binary:
 ```shell
-sudo ln -s "$USER.pyenv/shims/python" /usr/local/bin/python
+sudo ln -s "$HOME/.pyenv/shims/python" /usr/local/bin/python
 ```
