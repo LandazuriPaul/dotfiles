@@ -1,14 +1,13 @@
 # Rust integration
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
-# Pyenv
+# Pyenv integration
 if [ -x "$(command -v pyenv)" ]; then
   eval "$(pyenv init -)"
 fi
 
 # jEnv integration
 if [ -x "$(command -v jenv)" ]; then
-    export PATH="$HOME/.jenv/bin:$PATH"
     eval "$(jenv init -)"
 fi
 
@@ -34,6 +33,6 @@ if [ -x "$(command -v terraform)" ]; then
 fi
 
 # Stern completion
-if [ -x "$(command -v kubectl)" ]; then
+if [ -x "$(command -v stern)" ]; then
   source <(stern --completion=zsh)
 fi

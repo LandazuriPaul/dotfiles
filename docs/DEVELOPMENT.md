@@ -67,6 +67,16 @@ Some development tools to complete the installation process.
    ```sh
    brew install grep
    ```
+## Python 3
+
+1. Install [pyenv](https://github.com/pyenv/pyenv), the Python version manager:
+    ```shell
+    brew install pyenv
+    ```
+2. Install the latest Python3 version globally:
+    ```shell
+    pyenv install 3
+    ```
 
 ## Node.js
 

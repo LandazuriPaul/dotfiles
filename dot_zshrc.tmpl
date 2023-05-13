@@ -116,25 +116,22 @@ fi
 setopt no_bare_glob_qual
 setopt extended_glob
 
-# Use the bash profile
-source ~/.bash_profile
-
-# Use the bash aliases
-source ~/.bash_aliases
-
-# Use the bash functions
-source ~/.bash_functions
-
 # Homebrew on M1 CPU fix
 {{- if eq .chezmoi.os "darwin" }}
 eval $(/opt/homebrew/bin/brew shellenv)
 {{- end }}
+
+# Load profile
+source ~/.profile
+
+# Load aliases
+source ~/.aliases
+
+# Load functions
+source ~/.functions
 
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Fuzzy finder integration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Other shell integrations
-source ~/.zsh_integrations.sh
