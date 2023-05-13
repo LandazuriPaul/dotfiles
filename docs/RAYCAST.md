@@ -72,7 +72,7 @@ Just a useful command to run internet speed tests from Raycast.
 
 Once installed, before browsing and installing commands:
 
-- Go to Raycast Settings > Extensions > Search Script Command
+- Go to Raycast Settings > Extensions > Search Script Command (or if you're installing it from Raycast prompt, you should have a form after installation)
 - Tick the checkbox "I will manually add the Folder Path to Raycast Preferences > Extensions > Scripts > Script
   commands > Add Directories."
 - Just to be sure, paste the path to the directory: `~/.raycast/script-commands`.

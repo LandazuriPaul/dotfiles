@@ -5,6 +5,7 @@ Some development tools to complete the installation process.
 
 - [CLI Tools](#cli-tools)
     - [General](#general)
+    - [Python 3](#python-3)
     - [Node.js](#nodejs)
     - [Java](#java)
     - [DevOps Tools](#devops-tools)
