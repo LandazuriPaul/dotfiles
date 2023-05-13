@@ -1,6 +1,6 @@
 # Utilities
 
-- [Raycast](https://www.raycast.com/): « Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks, calculate, share common links, and much more. »
+- [Raycast](https://www.raycast.com/): « Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks, calculate, share common links, and much more. » See [RAYCAST.md](./RAYCAST.md) for more information.
 
 - [Choosy*](https://www.choosyosx.com/): « Opens every link in the right browser. » OR
 
