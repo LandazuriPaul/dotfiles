@@ -172,6 +172,16 @@ Some development tools to complete the installation process.
     brew install yq
     ```
 
+10. Install [gh](https://cli.github.com/):
+    ```shell
+    brew install gh
+    ```
+
+11. Install [cat](https://github.com/nektos/act):
+    ```shell
+    brew install act
+    ```
+
 # Terminal Applications
 
 ## iTerm2
