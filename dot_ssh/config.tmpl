@@ -1,5 +1,4 @@
 {{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
-Host vivacitydevices
-  HostName 35.189.75.146
-  User ubuntu
+{{ onepasswordRead "op://private/ssh-config/config" "vivacitylabs.1password.com" }}
+{{ (bitwarden "item" "ssh-config").notes }}
 {{- end }}
