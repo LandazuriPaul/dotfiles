@@ -1,8 +1,8 @@
 " ===========================
-" Common neovim & vim settings
+" Vim settings
 " ===========================
 " Load keyboard mappings
-source ~/.config/nvim/mappings.vim
+source ~/.config/vim/mappings.vim
 
 " ===========================
 " ideavim-specific settings

@@ -1,12 +1,7 @@
 " ====================================
 " Plugin loading
 " ====================================
-" vim-plug (different folder for vim & neovim)
-if has('nvim')
-    call plug#begin('~/.local/share/nvim/plugged')
-else
-    call plug#begin('~/.vim/plugged')
-endif
+call plug#begin('~/.vim/plugged')
 
 " editing
 Plug 'scrooloose/nerdcommenter'

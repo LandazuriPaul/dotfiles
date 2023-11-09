@@ -61,9 +61,6 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-" ===========================
-" vim-specific settings
-" ===========================
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -76,14 +73,11 @@ set shell=bash " Specific for fish shell integration
 " Basic editing settings
 nnoremap <U> :redo<CR>
 
-" ===========================
-" Common neovim & vim settings
-" ===========================
 " Load plugins & their settings
-source ~/.config/nvim/plugins.vim
+source ~/.config/vim/plugins.vim
 
 " Load ui config
-source ~/.config/nvim/ui.vim
+source ~/.config/vim/ui.vim
 
 " Load keyboard mappings
-source ~/.config/nvim/mappings.vim
+source ~/.config/vim/mappings.vim
