@@ -36,3 +36,9 @@ fi
 if [ -x "$(command -v stern)" ]; then
   source <(stern --completion=zsh)
 fi
+
+# Task completion
+if [ -x "$(command -v task)" ]; then
+    autoload -U compinit
+    compinit -i
+fi
