@@ -1,7 +1,19 @@
+{{- if eq .hostname "blastoise" "pc-vivacity-pl" "pikachu" -}}
+### generic aliases
+
+{{- if eq .hostname "blastoise" -}}
+# magick (for PhotoLab output conversion to HEIC)
+alias magick-heic='magick mogrify -format heic -depth 10 -path .. -delete 1,1 *.tif'
+{{- end }}
+
+#### sensitive aliases
+
 {{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
 {{ (bitwarden "item" "laptop-aliases").notes }}
 {{- end }}
 
 {{- if eq .hostname "pikachu" -}}
 {{ (bitwarden "item" "vps-aliases").notes }}
+{{- end }}
+
 {{- end }}

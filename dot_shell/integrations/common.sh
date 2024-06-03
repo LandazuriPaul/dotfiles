@@ -20,11 +20,13 @@ if [ -x "$(command -v kubectl)" ]; then
   source <(kubectl completion zsh)
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "${HOME}/.local/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/.local/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "${HOME}/.local/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/.local/google-cloud-sdk/completion.zsh.inc"; fi
+# GCloud
+if [ -f "${HOME}/.local/google-cloud-sdk/path.zsh.inc" ]; then
+  . "${HOME}/.local/google-cloud-sdk/path.zsh.inc"; # This updates PATH for the Google Cloud SDK.
+fi
+if [ -f "${HOME}/.local/google-cloud-sdk/completion.zsh.inc" ]; then
+  . "${HOME}/.local/google-cloud-sdk/completion.zsh.inc"; # This enables shell command completion for gcloud.
+fi
 
 # Terraform completion
 if [ -x "$(command -v terraform)" ]; then
