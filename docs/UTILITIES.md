@@ -10,6 +10,8 @@
 
 - [Bartender*](https://www.macbartender.com/): Help organise the mac menu bar icons.
 
+- [Ice**](https://github.com/jordanbaird/Ice): Open Source menu bar manager for macOS.
+
 - [iStats Menus*](https://bjango.com/mac/istatmenus/): Easily monitor the macOS system from the menu bar.
 
 - [Stats**](https://github.com/exelban/stats): macOS system monitor in your menu bar.
@@ -19,7 +21,7 @@
 
 - [Rectangle**](https://rectangleapp.com/): Move and resize windows in macOS using keyboard shortcuts or snap areas.
 
-- [UnnaturalScrollWheels**](https://github.com/ther0n/UnnaturalScrollWheels): Decouple trackpad and mouse wheel scrolling directions. 
+- [UnnaturalScrollWheels**](https://github.com/ther0n/UnnaturalScrollWheels): Decouple trackpad and mouse wheel scrolling directions.
   ```shell
   brew install --cask unnaturalscrollwheels
   ```
