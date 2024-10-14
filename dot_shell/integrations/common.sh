@@ -1,3 +1,10 @@
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
+# Fuzzy finder integration
+[ -f ~/.fzf.zsh ] && source "$HOME/.fzf.zsh"
+
 # Rust integration
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
@@ -44,3 +51,6 @@ if [ -x "$(command -v task)" ]; then
     autoload -U compinit
     compinit -i
 fi
+
+# iTerm2 integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
