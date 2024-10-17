@@ -1,3 +1,8 @@
 grep1() {
   awk -v pattern="${1:?pattern is empty}" 'NR==1 || $0~pattern' "${2:-/dev/stdin}";
 }
+
+take() {
+  mkdir -p "$1"
+   cd "$1" || exit
+}
