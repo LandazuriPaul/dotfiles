@@ -1,9 +1,8 @@
-# Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-
 # Fuzzy finder integration
 [ -f ~/.fzf.zsh ] && source "$HOME/.fzf.zsh"
+
+# zoxide integration
+eval "$(zoxide init --cmd cd zsh)"
 
 # Rust integration
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
