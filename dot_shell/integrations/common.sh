@@ -35,8 +35,11 @@ if [ -f "${HOME}/.local/google-cloud-sdk/completion.zsh.inc" ]; then
 fi
 
 # Nebius
-if [ -f '~/.nebius/completion.zsh.inc' ]; then
-  source '~/.nebius/completion.zsh.inc'
+if [ -d "${HOME}/.nebius" ]; then
+  export PATH="${HOME}/.nebius/bin:$PATH"
+fi
+if [ -f "${HOME}/.nebius/completion.zsh.inc" ]; then
+  source "${HOME}/.nebius/completion.zsh.inc"
 fi
 
 # Terraform completion
