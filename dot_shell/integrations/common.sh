@@ -34,6 +34,11 @@ if [ -f "${HOME}/.local/google-cloud-sdk/completion.zsh.inc" ]; then
   . "${HOME}/.local/google-cloud-sdk/completion.zsh.inc"; # This enables shell command completion for gcloud.
 fi
 
+# Nebius
+if [ -f '~/.nebius/completion.zsh.inc' ]; then
+  source '~/.nebius/completion.zsh.inc'
+fi
+
 # Terraform completion
 if [ -x "$(command -v terraform)" ]; then
   autoload -U +X bashcompinit && bashcompinit
