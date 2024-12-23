@@ -26,5 +26,6 @@
   "confirm_quit": true,
   "file_types": {
     "helm": ["*.tmpl.yaml"]
-  }
+  },
+  "terminal": { "font_family": "MesloLGS NF" }
 }
