@@ -1,0 +1,27 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-o": "projects::OpenRecent",
+      "cmd-b": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-alt-l": "editor::Format",
+      "cmd-shift-l": "editor::SplitSelectionIntoLines",
+      "cmd-d": "editor::DuplicateLineDown",
+      "ctrl-g": ["editor::SelectNext", { "replace_newest": false }],
+      "cmd-ctrl-g": "editor::SelectAllMatches",
+      "cmd-shift-backspace": "editor::DeleteLine"
+    }
+  }
+]
