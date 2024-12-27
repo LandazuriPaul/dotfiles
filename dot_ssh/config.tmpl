@@ -2,3 +2,7 @@
 {{ onepasswordRead "op://private/vivacity_ssh/vivacity_ssh.sh" "vivacitylabs.1password.com" }}
 {{ (bitwarden "item" "ssh-config").notes }}
 {{- end }}
+
+# Force basic colours for ghostty terminal
+Host *
+  SetEnv TERM=xterm-256color
