@@ -1,11 +1,15 @@
 # Color theme
-theme = catppuccin-mocha
+theme = Banana Blueberry
+
+# Unfocused splits
+unfocused-split-fill = 222200
 
 # Old school cursor
 shell-integration-features = cursor
 cursor-style = block
 
-# Transparency for quick view
+# Quick view settings
+quick-terminal-autohide = false
 background-opacity = 0.9
 background-blur-radius = 15
 
