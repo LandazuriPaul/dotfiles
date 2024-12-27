@@ -1,0 +1,4 @@
+# Global hotkey for quick terminal
+keybind = global:alt+space=toggle_quick_terminal
+
+keybind = super+backspace=text:\x15

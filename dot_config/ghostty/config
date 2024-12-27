@@ -1,0 +1,13 @@
+# Color theme
+theme = catppuccin-mocha
+
+# Old school cursor
+shell-integration-features = cursor
+cursor-style = block
+
+# Transparency for quick view
+background-opacity = 0.9
+background-blur-radius = 15
+
+# Load keybinds
+config-file = keybinds
