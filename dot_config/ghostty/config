@@ -1,3 +1,8 @@
+# While there is no search feature scrollback feature
+# See https://github.com/ghostty-org/ghostty/issues/189#issuecomment-2588366699
+keybind = cmd+f=write_scrollback_file:open
+scrollback-limit = 20000000
+
 # Color theme
 theme = Banana Blueberry
 
