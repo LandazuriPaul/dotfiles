@@ -36,9 +36,13 @@ To use script commands, you need to add a Script Directory:
 
 To install a new extension, in Raycast, use the `store` command. Here are the extensions I find very useful:
 
-### Authy
+### 1Password
 
-Access your 2FA code right from Raycast. I set an alias to it for ease of access: `au`.
+Access your 1Password items from Raycast.
+
+#### Command Configuration
+- `My Passwords`:
+  - alias: `op`
 
 ### Base64
 
@@ -47,6 +51,25 @@ Easily encode and decode text (from clipboard or from prompt) to and from base 6
 ### Brew
 
 Easily list, browse and manage your brew packages.
+
+### One Time Password
+
+Access your 2FA code right from Raycast. I set an alias to it for ease of access: `otp`.
+
+### Color Casket
+
+Quick colour picker
+
+### Convert Date
+
+Convert dates from Unix timestamps to and from human-readable formats.
+
+### Dash
+
+#### Command Configuration
+- `Create Docset Quicklink`: disabled
+- `Find in Dash`:
+  - alias: `dd`
 
 ### Docker
 
@@ -60,9 +83,27 @@ Create Fantastical events from Raycast.
 
 Access your GitHub notifications from Raycast.
 
-I really like the `Unread Notifications` menu bar item which lets me know whenever I get a new GitHub notification.
+#### Command Configuration
+- `My Pull Requests`:
+  - alias: `pr`
+- `Notifications`:
+  - alias: `gn`
 
-I set an alias to the `My Pull Requests` command which is very handy.
+### Google Workspace
+
+Search and create Google Drive documents from Raycast.
+
+#### Command Configuration
+- `Search Google Drive Files`:
+  - alias: `gd`
+- `Starred Google Drive Files`:
+  - alias: `gds`
+
+### IP Geolocation
+
+#### Command Configuration
+- `My IP Geolocation`:
+  - alias: `mi`
 
 ### Speedtest
 
