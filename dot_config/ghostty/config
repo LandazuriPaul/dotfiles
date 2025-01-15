@@ -16,8 +16,6 @@ cursor-style = block
 # Quick terminal settings
 quick-terminal-screen = macos-menu-bar
 quick-terminal-autohide = false
-background-opacity = 0.9
-background-blur-radius = 15
 
 # Confirm on quit
 confirm-close-surface = always
