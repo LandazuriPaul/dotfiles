@@ -9,10 +9,6 @@ theme = Banana Blueberry
 # Unfocused splits
 unfocused-split-fill = 222200
 
-# Old school cursor
-shell-integration-features = cursor
-cursor-style = block
-
 # Quick terminal settings
 quick-terminal-screen = macos-menu-bar
 quick-terminal-autohide = false
