@@ -13,20 +13,17 @@ To be sure you have all the prerequisites that this dotfiles repository makes us
 
 ## Install the dotfiles versioning system
 
-In order to install your dotfiles on a new machine, you can use the [install.sh](../.dotfiles-scripts/install.sh) script.
+To install these dotfiles, simply follow chezmoi's procedure (see the [official documentation](https://www.chezmoi.io/quick-start/#using-chezmoi-across-multiple-machines) for more information):
 
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/LandazuriPaul/macos-dotfiles/master/.dotfiles-scripts/install.sh)"
-```
+1. First make sure to add a new SSH key to your GitHub account, following [the official documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
-This script will:
+2. Install `chezmoi` locally:
+    ```shell
+    brew install chezmoi
+    ```
 
-1. Clone this repository in you `$HOME` directory bare mode renaming the `.git` directory into `.dotfiles`.
-2. Backup any conflicting current dotfiles you might have into the `$HOME/.config-backup` folder.
-3. Set the `showUntrackedFiles` status to `no` in the local git config so you can specifically add files to your dotfiles version system. This is to avoid having to ignore the vast majority of files and folder in your home directory.
-
-## Initialisation of the versioning system
-
-If you want to start a brand new tracking system for your dotfiles, checkout the [init.sh](../.dotfiles-scripts/init.sh) script.
-
-Also, if you plan on publishing your dotfiles to a public repository, it can be useful to change the `user.email` configuration straightaway, with the following command `dotfiles config user.email YOUR_EMAIL`.
+3. Then you can initialise the repository with chezmoi:
+    ```shell
+    chezmoi init --apply git@github.com:LandazuriPaul/dotfiles.git
+    ```
+    > If you'd rather download the repository first before applying, you can remove the `--apply` flag.

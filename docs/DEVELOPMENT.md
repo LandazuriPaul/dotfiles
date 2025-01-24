@@ -4,24 +4,25 @@ Development tools
 Some development tools to complete the installation process.
 
 - [CLI Tools](#cli-tools)
-    - [General](#general)
-    - [Python 3](#python-3)
-    - [Node.js](#nodejs)
-    - [Java](#java)
-    - [DevOps Tools](#devops-tools)
+  - [General](#general)
+  - [Python 3](#python-3)
+  - [Node.js](#nodejs)
+  - [Java](#java)
+  - [DevOps Tools](#devops-tools)
 - [Terminal Applications](#terminal-applications)
-    - [iTerm2](#iterm2)
-        - [Preferences](#preferences)
-        - [Shell integration features](#shell-integration-features)
-        - [Long-running commands](#long-running-commands)
+  - [Ghostty](#ghostty)
+  - [iTerm2](#iterm2)
+    - [Preferences](#preferences)
+    - [Shell integration features](#shell-integration-features)
+    - [Long-running commands](#long-running-commands)
 - [Editors and IDEs](#editors-and-ides)
-    - [Sublime Text](#sublime-text)
-    - [Visual Studio Code](#visual-studio-code)
-        - [Settings and extensions](#settings-and-extensions)
-        - [Fonts](#fonts)
+  - [Sublime Text](#sublime-text)
+  - [Visual Studio Code](#visual-studio-code)
+    - [Settings and extensions](#settings-and-extensions)
+    - [Fonts](#fonts)
 - [Other development tools](#other-development-tools)
-    - [Fork](#fork)
-    - [TablePlus](#tableplus)
+  - [Fork](#fork)
+  - [TablePlus](#tableplus)
 
 # CLI Tools
 
@@ -135,7 +136,7 @@ Some development tools to complete the installation process.
 
     Also, if you want to work with GKE, you need to install the GKE plugin:
     ```shell
-   gcloud components install gke-gcloud-auth-plugin 
+   gcloud components install gke-gcloud-auth-plugin
    ```
 
 4. Install [Terraform](https://www.terraform.io/):
@@ -183,6 +184,12 @@ Some development tools to complete the installation process.
     ```
 
 # Terminal Applications
+
+## Ghostty
+
+Install Ghostty from the official website: [https://ghostty.org/](https://ghostty.org/).
+
+The configuration is saved under the [.config/ghostty](/dot_config/ghostty/) directory.
 
 ## iTerm2
 

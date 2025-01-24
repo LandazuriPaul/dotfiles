@@ -3,21 +3,21 @@
 
 ## Open Source
 
-- [Ice**](https://github.com/jordanbaird/Ice): Open Source menu bar manager for macOS.
+- [Ice](https://github.com/jordanbaird/Ice): Open Source menu bar manager for macOS.
 
-- [Stats**](https://github.com/exelban/stats): macOS system monitor in your menu bar.
+- [Stats](https://github.com/exelban/stats): macOS system monitor in your menu bar.
   ```shell
   brew install stats
   ```
 
 - [Rectangle](https://rectangleapp.com/): Move and resize windows in macOS using keyboard shortcuts or snap areas.
 
-- [Gitify**](https://www.gitify.io/): A menubar application to be notified on GitHub notifications.
+- [Gitify](https://www.gitify.io/): A menubar application to be notified on GitHub notifications.
   ```sh
   brew cask install gitify
   ```
 
-- [UnnaturalScrollWheels**](https://github.com/ther0n/UnnaturalScrollWheels): Decouple trackpad and mouse wheel scrolling directions.
+- [UnnaturalScrollWheels](https://github.com/ther0n/UnnaturalScrollWheels): Decouple trackpad and mouse wheel scrolling directions.
   ```shell
   brew install --cask unnaturalscrollwheels
   ```
@@ -39,7 +39,7 @@
 
 ## Paid Software
 
-- [Choosy*](https://www.choosyosx.com/): « Opens every link in the right browser. » OR
+- [Choosy](https://www.choosyosx.com/): « Opens every link in the right browser. » OR
 
 - [Bartender](https://www.macbartender.com/): Help organise the mac menu bar icons.
 
