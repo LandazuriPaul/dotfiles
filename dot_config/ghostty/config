@@ -18,3 +18,6 @@ confirm-close-surface = always
 
 # Load keybinds
 config-file = keybinds
+
+# Save window state
+window-save-state = always
