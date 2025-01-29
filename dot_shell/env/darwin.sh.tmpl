@@ -1,0 +1,4 @@
+{{- if eq .chezmoi.os "darwin" -}}
+# GNU implementations
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+{{- end }}

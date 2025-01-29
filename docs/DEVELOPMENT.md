@@ -63,11 +63,9 @@ Some development tools to complete the installation process.
    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
    ```
 
-7. `grep`: Since some commands we use use the GNU grep and the macOS one isn’t entirely compatible with it, it can be
-   useful to install the GNU one. Then this specific grep is available via `ggrep`:
-
+7. GNU implementations of common CLI tools: To avoid unnecessary headaches, better to use the standard GNU implementations of these common tools:
    ```sh
-   brew install grep
+   brew install grep gnu-sed
    ```
 ## Python 3
 

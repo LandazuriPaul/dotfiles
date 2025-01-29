@@ -3,6 +3,11 @@
 # Load common environment variables
 source ~/.shell/env/common.sh
 
+{{ if eq .chezmoi.os "darwin" -}}
+# Darwin
+[ -f ~/.shell/env/darwin.sh ] && source ~/.shell/env/darwin.sh
+{{- end }}
+
 {{ if eq .hostname "pc-vivacity-pl" "blastoise" -}}
 # Vivacity
 [ -f ~/.shell/env/vivacity.sh ] && source ~/.shell/env/vivacity.sh
