@@ -32,6 +32,15 @@ auth       sufficient     pam_tid.so
 
 Then restart iTerm2.
 
+### Check Secure Input
+
+A handy command to check if a program is stuck using the Secure Input:
+```shell
+ioreg -l -d 1 -w 0 | grep SecureInput
+```
+
+
+
 ### Microphone toggle
 
 Service to toggle on/off the microphone: [https://medium.com/macoclock/how-in-the-bleep-do-i-mute-my-mic-anywhere-on-macos-d2fa1185b13](https://medium.com/macoclock/how-in-the-bleep-do-i-mute-my-mic-anywhere-on-macos-d2fa1185b13).
