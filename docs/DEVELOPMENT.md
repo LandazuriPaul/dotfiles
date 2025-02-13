@@ -55,7 +55,13 @@ Some development tools to complete the installation process.
    brew install bat
    ```
 
-6. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm):
+6. Install [btop](https://github.com/aristocratos/btop):
+
+   ```sh
+   brew install btop
+   ```
+
+7. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm):
 
    ```sh
    brew install tmux
@@ -63,7 +69,7 @@ Some development tools to complete the installation process.
    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
    ```
 
-7. GNU implementations of common CLI tools: To avoid unnecessary headaches, better to use the standard GNU implementations of these common tools:
+8. GNU implementations of common CLI tools: To avoid unnecessary headaches, better to use the standard GNU implementations of these common tools:
    ```sh
    brew install grep gnu-sed
    ```

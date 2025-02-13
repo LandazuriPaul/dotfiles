@@ -28,7 +28,7 @@ Below I detail the process to get such a "shadow app" set up. In this instance, 
 5. Create a file under `Macos`: `zen-work` and paste the following in it (`Work` is the name of the target profile):
    ```shell
    #!/bin/sh
-    exec /Applications/Zen\ Browser.app/Contents/MacOS/zen -P "Work" --no-remote "$@"
+   exec /Applications/Zen\ Browser.app/Contents/MacOS/zen -P "Work" --no-remote "$@"
    ```
 
 6. Make this file executable:
