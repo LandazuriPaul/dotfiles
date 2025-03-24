@@ -19,5 +19,8 @@ confirm-close-surface = always
 # Load keybinds
 config-file = keybinds
 
+# Tab settings
+window-new-tab-position = end
+
 # Save window state
 window-save-state = always
