@@ -122,10 +122,10 @@ Some development tools to complete the installation process.
     brew install kubernetes-cli
     ```
 
-2. Install [kubectx](https://github.com/ahmetb/kubectx):
+2. Install [kubeswitch](https://github.com/danielfoehrKn/kubeswitch):
 
    ```sh
-   brew install kubectx
+   brew install danielfoehrkn/switch/switch
    ```
 
 3. Install [Google Cloud SDK](https://cloud.google.com/sdk/):

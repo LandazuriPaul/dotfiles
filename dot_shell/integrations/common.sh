@@ -26,6 +26,12 @@ if [ -x "$(command -v kubectl)" ]; then
   source <(kubectl completion zsh)
 fi
 
+# kubeswitch
+if [ -x "$(command -v switcher)" ]; then
+  source <(switcher init zsh)
+  source <(switch completion zsh)
+fi
+
 # GCloud
 if [ -f "${HOME}/.local/google-cloud-sdk/path.zsh.inc" ]; then
   . "${HOME}/.local/google-cloud-sdk/path.zsh.inc"; # This updates PATH for the Google Cloud SDK.
