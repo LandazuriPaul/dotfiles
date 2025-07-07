@@ -1,5 +1,7 @@
 # Fuzzy finder integration
-[ -f ~/.fzf.zsh ] && source "$HOME/.fzf.zsh"
+if [ -x "$(command -v fzf)" ]; then
+  source <(fzf --zsh)
+fi
 
 # zoxide integration
 eval "$(zoxide init --cmd cd zsh)"
