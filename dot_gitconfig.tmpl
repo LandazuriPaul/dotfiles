@@ -7,3 +7,6 @@
 	insteadOf = https://github.com/
 [core]
 	excludesfile = {{ .chezmoi.homeDir }}/.gitignore
+
+[includeIf "gitdir:~/dev/GitHub/enapihq/"]
+    path = ~/dev/GitHub/enapihq/.gitconfig.inc
