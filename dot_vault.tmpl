@@ -1,8 +1,0 @@
-{{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
-  {{- $repos := printf "%s/dev/GitHub/vivacitylabs" (env "HOME") -}}
-  {{- if eq .hostname "pc-vivacity-pl" -}}
-    {{- $repos = printf "%s/dev/vivacitylabs" (env "HOME") -}}
-  {{- end -}}
-
-token_helper = {{ printf "\"%s/atrocity/certs/vault-token-helper.sh\"" $repos }}
-{{ end -}}

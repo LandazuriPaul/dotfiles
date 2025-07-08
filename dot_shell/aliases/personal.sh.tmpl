@@ -1,4 +1,4 @@
-{{- if eq .hostname "blastoise" "pc-vivacity-pl" "pikachu" -}}
+{{- if eq .hostname "blastoise" "paul-enapi" "pikachu" -}}
 ### generic aliases
 
 {{- if eq .hostname "blastoise" -}}
@@ -8,7 +8,7 @@ alias magick-heic='magick mogrify -format heic -depth 10 -path .. -delete 1,1 *.
 
 #### sensitive aliases
 
-{{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
+{{- if eq .hostname "paul-enapi" "blastoise" -}}
 {{ (bitwarden "item" "laptop-aliases").notes }}
 {{- end }}
 

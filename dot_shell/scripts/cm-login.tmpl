@@ -16,7 +16,7 @@ echo "> Log in to 1Password (my.1password.com)"
 eval $(op signin --account my.1password.com)
 {{- end }}
 
-{{ if eq .chezmoi.hostname "pc-vivacity-pl" "blastoise" -}}
-echo "> Log in to 1Password (vivacitylabs.1password.com)"
-eval $(op signin --account vivacitylabs.1password.com)
+{{ if eq .chezmoi.hostname "paul-enapi" "blastoise" -}}
+echo "> Log in to 1Password (enapi.1password.com)"
+eval $(op signin --account enapi.1password.com)
 {{- end }}

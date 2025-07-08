@@ -1,0 +1,3 @@
+{{- if eq .hostname "paul-enapi" "blastoise" -}}
+{{ onepasswordRead "op://private/shell_env/shell_env.sh" "enapi.1password.com" }}
+{{- end }}

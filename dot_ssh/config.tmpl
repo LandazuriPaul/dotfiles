@@ -1,5 +1,5 @@
-{{- if eq .hostname "pc-vivacity-pl" "blastoise" -}}
-{{ onepasswordRead "op://private/vivacity_ssh/vivacity_ssh.sh" "vivacitylabs.1password.com" }}
+{{- if eq .hostname "paul-enapi" "blastoise" -}}
+{{ onepasswordRead "op://private/ssh_config/ssh_config.sh" "enapi.1password.com" }}
 {{ (bitwarden "item" "ssh-config").notes }}
 {{- end }}
 

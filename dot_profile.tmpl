@@ -8,9 +8,9 @@ source ~/.shell/env/common.sh
 [ -f ~/.shell/env/darwin.sh ] && source ~/.shell/env/darwin.sh
 {{- end }}
 
-{{ if eq .hostname "pc-vivacity-pl" "blastoise" -}}
-# Vivacity
-[ -f ~/.shell/env/vivacity.sh ] && source ~/.shell/env/vivacity.sh
+{{ if eq .hostname "paul-enapi" "blastoise" -}}
+# ENAPI
+[ -f ~/.shell/env/enapi.sh ] && source ~/.shell/env/enapi.sh
 {{- end }}
 
 # Kube configs
