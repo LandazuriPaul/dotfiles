@@ -7,6 +7,12 @@
 	insteadOf = https://github.com/
 [core]
 	excludesfile = {{ .chezmoi.homeDir }}/.gitignore
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 
+# Organisation-specific configurations
 [includeIf "gitdir:~/dev/GitHub/enapihq/"]
-    path = ~/dev/GitHub/enapihq/.gitconfig.inc
+    path = ~/dev/GitHub/enapihq/.gitconfig
