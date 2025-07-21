@@ -29,6 +29,11 @@ fi
 # pnpm
 export PATH="$PNPM_HOME:$PATH"
 
+# Docker
+if [ -x "$(command -v docker)" ]; then
+  export FPATH="$HOME/.docker/completions:$FPATH"
+fi
+
 # kubectl completion
 if [ -x "$(command -v kubectl)" ]; then
   source <(kubectl completion zsh)

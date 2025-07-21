@@ -48,6 +48,9 @@ zinit snippet OMZP::sudo
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 
+# Load profile before completions
+source ~/.profile
+
 # Load completions
 autoload -Uz compinit && compinit
 
@@ -93,9 +96,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='zed'
 fi
-
-# Load profile
-source ~/.profile
 
 # Load aliases
 source ~/.aliases
