@@ -19,9 +19,15 @@ if [ -x "$(command -v jenv)" ]; then
     eval "$(jenv init -)"
 fi
 
+# sdkman integration
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 # nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PATH="$PNPM_HOME:$PATH"
 
 # kubectl completion
 if [ -x "$(command -v kubectl)" ]; then
