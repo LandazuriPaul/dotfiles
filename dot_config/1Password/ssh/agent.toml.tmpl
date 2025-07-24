@@ -1,0 +1,3 @@
+{{- if eq .hostname "paul-enapi" "blastoise" -}}
+{{ onepasswordRead "op://private/1password-ssh-agent/agent.toml" "enapi.1password.com" }}
+{{- end }}
