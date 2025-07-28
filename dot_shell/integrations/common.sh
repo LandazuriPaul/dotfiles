@@ -45,6 +45,11 @@ if [ -x "$(command -v switcher)" ]; then
   source <(switch completion zsh)
 fi
 
+# AWS
+if [ -x "$(command -v assume)" ]; then
+  alias assume=". assume"
+fi
+
 # GCloud
 if [ -f "${HOME}/.local/google-cloud-sdk/path.zsh.inc" ]; then
   . "${HOME}/.local/google-cloud-sdk/path.zsh.inc"; # This updates PATH for the Google Cloud SDK.
