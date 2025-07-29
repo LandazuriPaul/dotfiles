@@ -23,5 +23,10 @@
       "cmd-ctrl-g": "editor::SelectAllMatches",
       "cmd-shift-backspace": "editor::DeleteLine"
     }
+  },
+  {
+    "bindings": {
+      "cmd-d": "editor::DuplicateSelection"
+    }
   }
 ]

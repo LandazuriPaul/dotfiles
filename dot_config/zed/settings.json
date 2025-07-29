@@ -27,5 +27,6 @@
   "file_types": {
     "helm": ["*.tmpl.yaml"]
   },
-  "terminal": { "font_family": "MesloLGS NF" }
+  "terminal": { "font_family": "MesloLGS NF" },
+  "soft_wrap": "editor_width"
 }
