@@ -1,0 +1,3 @@
+{{- if eq .hostname "paul-enapi" "blastoise" -}}
+{{ onepasswordRead "op://private/temporalio/temporal.yaml" "enapi.1password.com" }}
+{{- end }}
