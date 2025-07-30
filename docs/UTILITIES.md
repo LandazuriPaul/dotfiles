@@ -26,6 +26,8 @@
 
 - [Raycast](https://www.raycast.com/): « Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks, calculate, share common links, and much more. » See [RAYCAST.md](./RAYCAST.md) for extensions and more information.
 
+- [Itsycal](https://www.mowglii.com/itsycal/): Itsycal is a tiny menu bar calendar.
+
 - [Velja](https://apps.apple.com/us/app/velja/id1607635845): « Open links in a specific browser or a matching native app. Easily switch between browsers. »
 
 - [f.lux](https://justgetflux.com/): Adapt your screen to your light environment.
