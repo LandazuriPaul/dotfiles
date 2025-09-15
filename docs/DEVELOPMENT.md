@@ -55,13 +55,25 @@ Some development tools to complete the installation process.
    brew install bat
    ```
 
-6. Install [btop](https://github.com/aristocratos/btop):
+6. Install [ripgrep](https://github.com/BurntSushi/ripgrep):
+
+   ```sh
+   brew install ripgrep
+   ```
+
+7. Install [fd](https://github.com/sharkdp/fd):
+
+   ```sh
+   brew install fd
+   ```
+
+8. Install [btop](https://github.com/aristocratos/btop):
 
    ```sh
    brew install btop
    ```
 
-7. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm):
+9. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm):
 
    ```sh
    brew install tmux
@@ -69,7 +81,7 @@ Some development tools to complete the installation process.
    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
    ```
 
-8. GNU implementations of common CLI tools: To avoid unnecessary headaches, better to use the standard GNU implementations of these common tools:
+10. GNU implementations of common CLI tools: To avoid unnecessary headaches, better to use the standard GNU implementations of these common tools:
    ```sh
    brew install grep gnu-sed
    ```
