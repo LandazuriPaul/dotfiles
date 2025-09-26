@@ -22,6 +22,11 @@
   brew install --cask unnaturalscrollwheels
   ```
 
+- [DeskPad](https://github.com/Stengo/DeskPad): A virtual monitor for screen sharing.
+  ```shell
+  brew install deskpad
+  ```
+
 ## Freeware
 
 - [Raycast](https://www.raycast.com/): « Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks, calculate, share common links, and much more. » See [RAYCAST.md](./RAYCAST.md) for extensions and more information.
