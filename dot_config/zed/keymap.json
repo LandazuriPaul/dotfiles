@@ -28,5 +28,16 @@
     "bindings": {
       "cmd-d": "editor::DuplicateSelection"
     }
+  },
+  {
+    "bindings": {
+      "cmd-shift-w": null
+    }
+  },
+  {
+    "context": "!ContextEditor > (Editor && mode == full)",
+    "bindings": {
+      "cmd-shift-w": "pane::RevealInProjectPanel"
+    }
   }
 ]
