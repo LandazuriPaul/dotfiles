@@ -66,12 +66,6 @@ if [ -f "${HOME}/.nebius/completion.zsh.inc" ]; then
   source "${HOME}/.nebius/completion.zsh.inc"
 fi
 
-# Terraform completion
-if [ -x "$(command -v terraform)" ]; then
-  autoload -U +X bashcompinit && bashcompinit
-  complete -o nospace -C terraform terraform
-fi
-
 # Stern completion
 if [ -x "$(command -v stern)" ]; then
   source <(stern --completion=zsh)

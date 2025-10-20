@@ -155,10 +155,10 @@ Some development tools to complete the installation process.
    gcloud components install gke-gcloud-auth-plugin
    ```
 
-4. Install [Terraform](https://www.terraform.io/):
+4. Install [Tenv](https://tofuutils.github.io/tenv/):
 
    ```sh
-   brew install terraform
+   brew install tenv
    ```
 
 5. Install [Watch](https://formulae.brew.sh/formula/watch): Command line tool to run periodically a program and has its
