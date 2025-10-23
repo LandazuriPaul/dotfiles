@@ -1,13 +1,25 @@
+# ---
+# --- Terminal
+# ---
+
 # Fuzzy finder integration
 if [ -x "$(command -v fzf)" ]; then
   source <(fzf --zsh)
 fi
 
 # zoxide integration
-eval "$(zoxide init --cmd cd zsh)"
+if [ -x "$(command -v zoxide)" ]; then
+    eval "$(zoxide init --cmd cd zsh)"
+fi
+
+# ---
+# --- Languages
+# ---
 
 # Rust integration
-[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
 
 # Pyenv integration
 if [ -x "$(command -v pyenv)" ]; then
@@ -20,19 +32,37 @@ if [ -x "$(command -v jenv)" ]; then
 fi
 
 # sdkman integration
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+if [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
 
 # nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    source "$NVM_DIR/nvm.sh"
+fi
 
-# pnpm
-export PATH="$PNPM_HOME:$PATH"
+# ---
+# --- Tools
+# ---
+
+# Task completion
+if [ -x "$(command -v task)" ]; then
+    autoload -U compinit
+    compinit -i
+fi
+
+if [ -x "$(command -v ngrok)" ]; then
+    eval "$(ngrok completion)"
+fi
 
 # Docker
 if [ -x "$(command -v docker)" ]; then
   export FPATH="$HOME/.docker/completions:$FPATH"
 fi
+
+# ---
+# --- DevOps
+# ---
 
 # kubectl completion
 if [ -x "$(command -v kubectl)" ]; then
@@ -70,12 +100,3 @@ fi
 if [ -x "$(command -v stern)" ]; then
   source <(stern --completion=zsh)
 fi
-
-# Task completion
-if [ -x "$(command -v task)" ]; then
-    autoload -U compinit
-    compinit -i
-fi
-
-# iTerm2 integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

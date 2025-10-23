@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# ---
+# --- Environment variables
+# ---
+
 # Load common environment variables
 source ~/.shell/env/common.sh
 
@@ -21,6 +25,10 @@ source ~/.shell/env/common.sh
 
 # Load local environment variables
 [ -f ~/.shell/env/local.sh ] && source ~/.shell/env/local.sh
+
+# ---
+# --- Integrations
+# ---
 
 # Load common integrations
 source ~/.shell/integrations/common.sh

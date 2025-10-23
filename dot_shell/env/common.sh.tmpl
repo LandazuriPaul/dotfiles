@@ -1,8 +1,19 @@
+# ---
+# --- Base executables
+# ---
+
 # sbin
 export PATH="$PATH:/usr/local/sbin"
 
+# Local executable scripts
+export PATH="$PATH:$HOME/.shell/exec"
+
 # Homebrew
 export PATH="$PATH:/usr/local/opt/python/libexec/bin"
+
+# ---
+# --- Languages
+# ---
 
 # PyEnv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -22,6 +33,7 @@ export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PATH:$PNPM_HOME"
 
 # Go
 export GOPATH="$HOME/dev/go"
@@ -33,6 +45,3 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 # PostgreSQL utils (libpq)
 export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
-
-# Local executable scripts
-export PATH="$PATH:$HOME/.shell/exec"
