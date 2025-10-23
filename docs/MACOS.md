@@ -59,3 +59,25 @@ Service to toggle on/off the
 microphone: [https://medium.com/macoclock/how-in-the-bleep-do-i-mute-my-mic-anywhere-on-macos-d2fa1185b13](https://medium.com/macoclock/how-in-the-bleep-do-i-mute-my-mic-anywhere-on-macos-d2fa1185b13).
 
 Then you can assign a shortcut to this service in the System Preferences > Keyboard > Shortcuts > Services
+
+## Apps
+
+### VLC
+
+To be able to run multiple instances of VLC at the same time, save the below code as a new app (e.g. `VLC droplet.app`) via the AppleScript Editor:
+
+```AppleScript
+on run
+    do shell script "open -n /Applications/VLC.app"
+    tell application "VLC" to activate
+end run
+
+on open theFiles
+    repeat with theFile in theFiles
+        do shell script "open -na /Applications/VLC.app " & quote & (POSIX path of theFile) & quote
+    end repeat
+    tell application "VLC" to activate
+end open
+```
+
+See [the official documentation](https://wiki.videolan.org/VLC_HowTo/Play_multiple_instances/) for more information.

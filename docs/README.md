@@ -1,7 +1,7 @@
 # Paul Landázuri macOS dotfiles
 
 This repository aims to ease the process of installing all
-crucial programs and settings on a brand new macOS.
+crucial programs and settings on a brand new macOS or Linux.
 
 ## Pre-installation steps
 
