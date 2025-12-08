@@ -128,19 +128,21 @@ Some development tools to complete the installation process.
 
 ## DevOps Tools
 
-1. Install the [Kubernetes](https://kubernetes.io/) CLI tool, `kubectl`:
+1. Install [Docker](https://www.docker.com/) following this [link](https://download.docker.com/mac/stable/Docker.dmg).
+
+2. Install the [Kubernetes](https://kubernetes.io/) CLI tool, `kubectl`:
 
     ```sh
     brew install kubernetes-cli
     ```
 
-2. Install [kubeswitch](https://github.com/danielfoehrKn/kubeswitch):
+3. Install [kubeswitch](https://github.com/danielfoehrKn/kubeswitch):
 
    ```sh
    brew install danielfoehrkn/switch/switch
    ```
 
-3. Install [Google Cloud SDK](https://cloud.google.com/sdk/):
+4. Install [Google Cloud SDK](https://cloud.google.com/sdk/):
 
    ```sh
    brew install google-cloud-sdk
@@ -155,46 +157,46 @@ Some development tools to complete the installation process.
    gcloud components install gke-gcloud-auth-plugin
    ```
 
-4. Install [Tenv](https://tofuutils.github.io/tenv/):
+5. Install [Tenv](https://tofuutils.github.io/tenv/):
 
    ```sh
    brew install tenv
    ```
 
-5. Install [Watch](https://formulae.brew.sh/formula/watch): Command line tool to run periodically a program and has its
+6. Install [Watch](https://formulae.brew.sh/formula/watch): Command line tool to run periodically a program and has its
    output upadted.
 
    ```sh
    brew install watch
    ```
 
-6. Install [k9s](https://k9scli.io/):
+7. Install [k9s](https://k9scli.io/):
 
    ```sh
    brew install k9s
    ```
 
-7. Install [stern](https://github.com/wercker/stern):
+8. Install [stern](https://github.com/wercker/stern):
    ```sh
    brew install stern
    ```
 
-8. Install [jq](https://stedolan.github.io/jq/):
+9. Install [jq](https://stedolan.github.io/jq/):
     ```shell
     brew install jq
     ```
 
-9. Install [yq](https://mikefarah.gitbook.io/yq/):
-    ```shell
-    brew install yq
-    ```
+10. Install [yq](https://mikefarah.gitbook.io/yq/):
+     ```shell
+     brew install yq
+     ```
 
-10. Install [gh](https://cli.github.com/):
+11. Install [gh](https://cli.github.com/):
     ```shell
     brew install gh
     ```
 
-11. Install [cat](https://github.com/nektos/act):
+12. Install [cat](https://github.com/nektos/act):
     ```shell
     brew install act
     ```

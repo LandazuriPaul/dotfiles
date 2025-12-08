@@ -1,65 +1,75 @@
-# General installation list
+# Install Instructions
 
-In order to have an operational system to develop, here is an sorted list of installation recommendations:
+You can follow these instructions to install this repository on a brand-new machine (server or laptop).
 
-1. Generate a new SSH key:
+## Prerequisites
 
+### Homebrew
+
+The Homebrew package manager allows to install recent versions of useful tools.
+See [official instructions](https://brew.sh/).
+
+If indicated, follow the post-installation recommendations (except the `.zshrc` updates) for Linux:
+```shell
+sudo apt-get install build-essential
+```
+
+### ZSH
+
+- Install `zsh`:
+  - Linux (Debian/Ubuntu):
+    ```shell
+    sudo apt-get install zsh
+    ```
+  
+  - macOS:
+    ```shell
+    brew install zsh
+    ```
+  
+- Set `zsh` as your default shell:
+  ```shell
+  chsh -s /bin/zsh
+  ```
+
+### Dependencies
+
+Some dependencies:
+
+```shell
+brew install git gcc gpg fzf zoxide chezmoi
+```
+
+Explanations:
+- `git`, `gcc` and `gpg` might be already installed, but `brew` has access to more recent versions and uses them internally.
+- `fzf` is a fantastic tool used by some ZSH extensions and referenced in this repository.
+- `zoxide` is a smarter `cd` command and uses `fzf` for efficient matching.
+- `chezmoi` for the dotfiles set up.
+
+### Password Managers
+
+See [PASSWORD_MANAGERS](./PASSWORD_MANAGERS.md).
+
+### SSH Key
+
+- Generate a new SSH key:
    ```sh
    ssh-keygen -t ed25519 -C "your_email@example.com"
    ```
 
-   And register it in your GitHub account, in your [SSH settings](https://github.com/settings/keys).
+- Register it in your GitHub account, in your [SSH settings](https://github.com/settings/keys).
 
-2. Install [Homebrew](https://brew.sh/), the macOS package manager:
+## Repository
 
-   ```sh
-   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   ```
+Finally, you can install this repository and apply it using `chezmoi`.
 
-3. Install the GPG CLI tool to be able to check package integrity:
+```shell
+chezmoi init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
+```
 
-   ```sh
-   brew install gpg
-   ```
+Once you have run this command, the `dotfiles` should be installed.
 
-4. Install the [git](https://git-scm.com/), the most common distributed version control system:
-
-   ```sh
-   brew install git
-   ```
-
-5. Install [zsh](https://www.zsh.org/) and set it as your default shell:
-
-   ```sh
-   brew install zsh # install ZSH
-   chsh -s /bin/zsh # set it as your default shell
-   ```
-
-6. Install [Zinit](https://ohmyz.sh/): see
-   the [official installation instructions](https://github.com/zdharma-continuum/zinit?tab=readme-ov-file#install)
-
-7. Install [iTerm2](https://iterm2.com/), following [this link](https://iterm2.com/downloads/stable/latest). Once
-   installed, head to the instructions at [ITERM2.md](./ITERM2.md)
-
-8. The prompt reauires the MesloLGS font that you can
-   find [here](https://github.com/romkatv/powerlevel10k#manual-font-installation).
-
-9. Install [fzf](https://github.com/junegunn/fzf), the general-purpose command-line fuzzy finder:
-
-   ```sh
-   brew install fzf
-   ```
-
-   Once installed, with `ctrl+r`, you'll be able to fuzzy-find entries in your zsh or bash history. See the project
-   page for more information and usages.
-
-10. Instal [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file), the smarter cd:
-
-   ```sh
-   brew install zoxide
-   ```
-
-11. Install [Docker](https://www.docker.com/) following this [link](https://download.docker.com/mac/stable/Docker.dmg).
+Just launch a new session and all the zsh extensions should be installed for you and you should be good to go!
 
 ---
 
