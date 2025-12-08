@@ -93,19 +93,13 @@ Some development tools to complete the installation process.
 
 1. Install [Docker](https://www.docker.com/) following this [link](https://download.docker.com/mac/stable/Docker.dmg).
 
-2. Install the [Kubernetes](https://kubernetes.io/) CLI tool, `kubectl`:
+2. Install the [Kubernetes](https://kubernetes.io/) CLI tool, `kubectl`, [kubeswitch](https://github.com/danielfoehrKn/kubeswitch), [Tenv](https://tofuutils.github.io/tenv/), [Watch](https://formulae.brew.sh/formula/watch), [k9s](https://k9scli.io/), [stern](https://github.com/wercker/stern), [jq](https://stedolan.github.io/jq/), [yq](https://mikefarah.gitbook.io/yq/), [gh](https://cli.github.com/):
 
     ```sh
-    brew install kubernetes-cli
+    brew install kubernetes-cli danielfoehrkn/switch/switch tenv watch k9s stern jq yq gh
     ```
 
-3. Install [kubeswitch](https://github.com/danielfoehrKn/kubeswitch):
-
-   ```sh
-   brew install danielfoehrkn/switch/switch
-   ```
-
-4. Install [Google Cloud SDK](https://cloud.google.com/sdk/):
+3. Install [Google Cloud SDK](https://cloud.google.com/sdk/):
 
    ```sh
    brew install google-cloud-sdk
@@ -118,51 +112,12 @@ Some development tools to complete the installation process.
     Also, if you want to work with GKE, you need to install the GKE plugin:
     ```shell
    gcloud components install gke-gcloud-auth-plugin
-   ```
-
-5. Install [Tenv](https://tofuutils.github.io/tenv/):
-
-   ```sh
-   brew install tenv
-   ```
-
-6. Install [Watch](https://formulae.brew.sh/formula/watch): Command line tool to run periodically a program and has its
-   output upadted.
-
-   ```sh
-   brew install watch
-   ```
-
-7. Install [k9s](https://k9scli.io/):
-
-   ```sh
-   brew install k9s
-   ```
-
-8. Install [stern](https://github.com/wercker/stern):
-   ```sh
-   brew install stern
-   ```
-
-9. Install [jq](https://stedolan.github.io/jq/):
-    ```shell
-    brew install jq
     ```
 
-10. Install [yq](https://mikefarah.gitbook.io/yq/):
-     ```shell
-     brew install yq
-     ```
-
-11. Install [gh](https://cli.github.com/):
-    ```shell
-    brew install gh
-    ```
-
-12. Install [cat](https://github.com/nektos/act):
-    ```shell
-    brew install act
-    ```
+4. If relevant to test GitHub Actions pipeline locally, install [cat](https://github.com/nektos/act):
+   ```shell
+   brew install act
+   ```
 
 # Terminal Applications
 
@@ -196,9 +151,9 @@ command. To do this as seamlessly as possible, I attached this action to a custo
 
 # Editors and IDEs
 
-## Sublime Text
+## Zed
 
-[Sublime Text](https://www.sublimetext.com/) is a very lightweight and efficient editor.
+[Zed](https://zed.dev/) is a very fast and modern editor.
 
 ## Visual Studio Code
 
