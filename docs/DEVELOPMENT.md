@@ -28,52 +28,19 @@ Some development tools to complete the installation process.
 
 ## General
 
-1. Install the Xcode Command Line tools:
+1. For macOS, install the Xcode Command Line tools and GNU implementations of common CLI tools: To avoid unnecessary headaches, better to use the standard GNU implementations:
 
    ```sh
    xcode-select --install
+   brew install grep gnu-sed
    ```
 
-2. Install [Neovim](https://neovim.io/):
-
+2. Install utilities via brew ([bat](https://github.com/sharkdp/bat), [ripgrep](https://github.com/BurntSushi/ripgrep), [fd](https://github.com/sharkdp/fd), [btop](https://github.com/aristocratos/btop), [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm)):
    ```sh
-   brew install neovim
+   brew install bat ripgrep fd btop
    ```
 
-3. Install [vim-plug](https://github.com/junegunn/vim-plug) for both vim and neovim following the
-   official [installation instructions](https://github.com/junegunn/vim-plug#installation).
-
-4. Install [yq](https://github.com/kislyuk/yq):
-
-   ```sh
-   pip3 install yq
-   ```
-
-5. Install [bat](https://github.com/sharkdp/bat):
-
-   ```sh
-   brew install bat
-   ```
-
-6. Install [ripgrep](https://github.com/BurntSushi/ripgrep):
-
-   ```sh
-   brew install ripgrep
-   ```
-
-7. Install [fd](https://github.com/sharkdp/fd):
-
-   ```sh
-   brew install fd
-   ```
-
-8. Install [btop](https://github.com/aristocratos/btop):
-
-   ```sh
-   brew install btop
-   ```
-
-9. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm):
+3. Install :
 
    ```sh
    brew install tmux
@@ -81,10 +48,6 @@ Some development tools to complete the installation process.
    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
    ```
 
-10. GNU implementations of common CLI tools: To avoid unnecessary headaches, better to use the standard GNU implementations of these common tools:
-   ```sh
-   brew install grep gnu-sed
-   ```
 ## Python 3
 
 1. Install [pyenv](https://github.com/pyenv/pyenv), the Python version manager:

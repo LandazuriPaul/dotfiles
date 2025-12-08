@@ -37,13 +37,14 @@ sudo apt-get install build-essential
 Some dependencies:
 
 ```shell
-brew install git gcc gpg fzf zoxide chezmoi
+brew install git gcc gpg fzf zoxide neovim chezmoi
 ```
 
 Explanations:
 - `git`, `gcc` and `gpg` might be already installed, but `brew` has access to more recent versions and uses them internally.
 - `fzf` is a fantastic tool used by some ZSH extensions and referenced in this repository.
 - `zoxide` is a smarter `cd` command and uses `fzf` for efficient matching.
+- `neovim` is a terminal editor.
 - `chezmoi` for the dotfiles set up.
 
 ### Password Managers
