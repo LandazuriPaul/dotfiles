@@ -41,6 +41,11 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
     source "$NVM_DIR/nvm.sh"
 fi
 
+# Bun
+if [ -s "$HOME/.bun/_bun" ]; then
+    source "$HOME/.bun/_bun";
+fi
+
 # ---
 # --- Tools
 # ---
