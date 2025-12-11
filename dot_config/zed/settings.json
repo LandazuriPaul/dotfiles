@@ -32,7 +32,8 @@
   },
   "confirm_quit": true,
   "file_types": {
-    "helm": ["*.tmpl.yaml"]
+    "Shell Script": ["*.sh.tmpl", "*rc.tmpl"],
+    "Helm": ["*.tmpl.yaml"]
   },
   "terminal": { "font_family": "MesloLGS NF" },
   "soft_wrap": "editor_width"
