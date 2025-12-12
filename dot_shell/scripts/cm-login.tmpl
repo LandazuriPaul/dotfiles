@@ -11,7 +11,7 @@ echo "> Log in to Bitwarden"
 export BW_SESSION="$(unlock)"
 
 # 1Password
-{{ if eq .chezmoi.hostname "blastoise" "raichu" -}}
+{{ if eq .chezmoi.hostname "blastoise" "vps-6a39a9e0" -}}
 echo "> Log in to 1Password (my.1password.com)"
 eval $(op signin --account my.1password.com)
 {{- end }}

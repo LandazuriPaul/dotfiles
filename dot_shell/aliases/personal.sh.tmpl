@@ -1,4 +1,4 @@
-{{- if eq .hostname "blastoise" "paul-enapi" "raichu" -}}
+{{- if eq .hostname "blastoise" "paul-enapi" "vps-6a39a9e0" -}}
 ### generic aliases
 
 {{- if eq .hostname "blastoise" -}}
@@ -12,7 +12,7 @@ alias magick-heic='magick mogrify -format heic -depth 10 -path .. -delete 1,1 *.
 {{ (bitwarden "item" "laptop-aliases").notes }}
 {{- end }}
 
-{{- if eq .hostname "raichu" -}}
+{{- if eq .hostname "vps-6a39a9e0" -}}
 {{ (bitwarden "item" "vps-aliases").notes }}
 {{- end }}
 
