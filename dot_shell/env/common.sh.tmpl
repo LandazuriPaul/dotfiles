@@ -3,25 +3,26 @@
 # ---
 
 # sbin
-export PATH="$PATH:/usr/local/sbin"
+export PATH="/usr/local/sbin:$PATH"
 
 # Local executable scripts
-export PATH="$PATH:$HOME/.shell/exec"
+export PATH="$HOME/.shell/exec:$PATH"
 
 # Homebrew
-export PATH="$PATH:/usr/local/opt/python/libexec/bin"
-export HOMEBREW_FORBIDDEN_CASKS="go"
-export HOMEBREW_FORBIDDEN_FORMULAE="go"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # ---
 # --- CLI Tools
 # ---
 
 # opencode
-export PATH="$PATH:$HOME/.opencode/bin"
+export PATH="$HOME/.opencode/bin:$PATH"
 # ---
 # --- Languages
 # ---
+
+# PostgreSQL utils (libpq)
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # PyEnv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -37,26 +38,22 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 
 # Yarn
-export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PATH:$PNPM_HOME"
+export PATH="$PNPM_HOME:$PATH"
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$PATH:$BUN_INSTALL/bin"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Go
 export GOPATH="$HOME/dev/go"
-export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:$GOROOT/bin"
-
-# Rust
-export PATH="$PATH:$HOME/.cargo/bin"
-
-# PostgreSQL utils (libpq)
-export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
+export PATH="$GOPATH/bin:$PATH"
 
 # ---
 # --- DevOps
