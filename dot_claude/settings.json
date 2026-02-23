@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "kotlin-lsp@claude-plugins-official": true,
+    "linear@claude-plugins-official": true,
+    "Notion@claude-plugins-official": true,
+    "agent-sdk-dev@claude-plugins-official": true,
+    "slack@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); cwd=$(echo \"$input\" | jq -r '.workspace.current_dir'); dir=\"${cwd/#$HOME/~}\"; model=$(echo \"$input\" | jq -r '.model.name // .model.id // \"unknown\"'); git_info=\"\"; if git -C \"$cwd\" rev-parse --git-dir > /dev/null 2>&1; then branch=$(git -C \"$cwd\" -c gc.autodetach=0 -c core.useBuiltinFSMonitor=0 branch --show-current 2>/dev/null || git -C \"$cwd\" -c gc.autodetach=0 -c core.useBuiltinFSMonitor=0 rev-parse --short HEAD 2>/dev/null); if [ -n \"$branch\" ]; then if ! git -C \"$cwd\" -c gc.autodetach=0 -c core.useBuiltinFSMonitor=0 diff-index --quiet HEAD -- 2>/dev/null; then git_info=\" ${branch} ✗\"; else git_info=\" ${branch} ✓\"; fi; fi; fi; vim_mode=$(echo \"$input\" | jq -r '.vim.mode // empty'); output_style=$(echo \"$input\" | jq -r '.output_style.name'); context_info=\"\"; if [ -n \"$vim_mode\" ]; then context_info=\" [${vim_mode}]\"; fi; if [ \"$output_style\" != \"default\" ]; then context_info=\"${context_info} ${output_style}\"; fi; ctx_display=\"\"; usage=$(echo \"$input\" | jq '.context_window.current_usage'); if [ \"$usage\" != \"null\" ]; then current=$(echo \"$usage\" | jq '.input_tokens + .cache_creation_input_tokens + .cache_read_input_tokens'); size=$(echo \"$input\" | jq '.context_window.context_window_size'); pct=$((current * 100 / size)); filled=$((pct / 10)); empty=$((10 - filled)); bar=\"\"; i=0; while [ $i -lt $filled ]; do bar=\"${bar}▓\"; i=$((i + 1)); done; i=0; while [ $i -lt $empty ]; do bar=\"${bar}░\"; i=$((i + 1)); done; ctx_display=\" ${bar} ${pct}%\"; fi; printf \" %s (%s)%s%s%s\" \"$dir\" \"$model\" \"$git_info\" \"$context_info\" \"$ctx_display\""
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  }
+}
