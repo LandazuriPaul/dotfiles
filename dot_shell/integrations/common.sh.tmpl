@@ -56,7 +56,7 @@ fi
 # ---
 
 # Worktrunk
-if [ command -v wt >/dev/null 2>&1]; then
+if [ -x "$(command -v wt)" ]; then
     eval "$(command wt config shell init zsh)";
 fi
 
