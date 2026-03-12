@@ -55,6 +55,11 @@ fi
 # --- Tools
 # ---
 
+# Mise
+if [-x "$(command -v mise)" ]; then
+  eval "$(mise activate zsh)";
+fi
+
 # Worktrunk
 if [ -x "$(command -v wt)" ]; then
     eval "$(command wt config shell init zsh)";
