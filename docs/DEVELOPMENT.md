@@ -35,58 +35,17 @@ Some development tools to complete the installation process.
    brew install grep gnu-sed
    ```
 
-2. Install utilities via brew ([bat](https://github.com/sharkdp/bat), [ripgrep](https://github.com/BurntSushi/ripgrep), [fd](https://github.com/sharkdp/fd), [btop](https://github.com/aristocratos/btop), [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm)):
+2. Install utilities via brew ([bat](https://github.com/sharkdp/bat), [ripgrep](https://github.com/BurntSushi/ripgrep), [fd](https://github.com/sharkdp/fd), [btop](https://github.com/aristocratos/btop), [mise](https://mise.jdx.dev/):
    ```sh
-   brew install bat ripgrep fd btop
+   brew install bat ripgrep fd btop mise
    ```
 
-3. Install :
+3. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm)):
 
    ```sh
    brew install tmux
    mkdir -p $HOME/.tmux/plugins
    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
-   ```
-
-## Python 3
-
-1. Install [pyenv](https://github.com/pyenv/pyenv), the Python version manager:
-    ```shell
-    brew install pyenv
-    ```
-2. Install the latest Python3 version globally:
-    ```shell
-    pyenv install 3
-    ```
-
-## Node.js
-
-1. Install [nvm](https://github.com/nvm-sh/nvm), the Node.js version manager:
-
-   ```sh
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
-   ```
-
-   Once the installation is complete, you can install the latest node version. This way you will be able to check that
-   the next install - yarn - has been successfully installed:
-
-   ```sh
-   nvm install node
-   ```
-
-2. Install [Yarn](https://classic.yarnpkg.com/), an efficient Node.js package manager. In order to avoid installing a
-   global Node.js version at the same time, avoid installing Yarn via Homebrew. You would rather want to install it
-   directly via the install script:
-
-   ```sh
-   curl -o- -L https://yarnpkg.com/install.sh | bash
-   ```
-
-## Java
-
-1. Install [jenv](https://www.jenv.be/), the Java version manager:
-   ```sh
-   brew install jenv
    ```
 
 ## DevOps Tools
