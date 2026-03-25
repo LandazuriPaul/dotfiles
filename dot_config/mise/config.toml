@@ -4,3 +4,29 @@
 trusted_config_paths = [
     '~/dev',
 ]
+
+[tools]
+# Basic tools
+bat = "latest"
+zoxide = "latest"
+fd = "latest"
+fzf = "latest"
+hwatch = "latest"
+jq = "latest"
+neovim = "latest"
+rg = "latest"
+tmux = "latest"
+yq = "latest"
+
+# Kubernetes
+k9s = "latest"
+kubectl = "latest"
+kubeswitch = "latest"
+stern = "latest"
+
+# Dotfiles
+chezmoi = "latest"
+
+# GitHub
+act = "latest"
+gh = "latest"

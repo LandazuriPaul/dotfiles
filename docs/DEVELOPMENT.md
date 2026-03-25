@@ -3,6 +3,8 @@ Development tools
 
 Some development tools to complete the installation process.
 
+First, make sure that we went through the [INSTALL.md](./INSTALL.md) and have mise installed all languages and tools.
+
 - [CLI Tools](#cli-tools)
   - [General](#general)
   - [Python 3](#python-3)
@@ -28,22 +30,21 @@ Some development tools to complete the installation process.
 
 ## General
 
-1. For macOS, install the Xcode Command Line tools and GNU implementations of common CLI tools: To avoid unnecessary headaches, better to use the standard GNU implementations:
+1. For macOS, install the Xcode Command Line tools and GNU implementations of common CLI tools:
 
    ```sh
    xcode-select --install
    brew install grep gnu-sed
    ```
 
-2. Install utilities via brew ([bat](https://github.com/sharkdp/bat), [ripgrep](https://github.com/BurntSushi/ripgrep), [fd](https://github.com/sharkdp/fd), [btop](https://github.com/aristocratos/btop), [mise](https://mise.jdx.dev/):
+2. Install utilities via brew [btop](https://github.com/aristocratos/btop):
    ```sh
-   brew install bat ripgrep fd btop mise
+   brew install btop
    ```
 
 3. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm)):
 
    ```sh
-   brew install tmux
    mkdir -p $HOME/.tmux/plugins
    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
    ```
@@ -52,30 +53,10 @@ Some development tools to complete the installation process.
 
 1. Install [Docker](https://www.docker.com/) following this [link](https://download.docker.com/mac/stable/Docker.dmg).
 
-2. Install the [Kubernetes](https://kubernetes.io/) CLI tool, `kubectl`, [kubeswitch](https://github.com/danielfoehrKn/kubeswitch), [Tenv](https://tofuutils.github.io/tenv/), [Watch](https://formulae.brew.sh/formula/watch), [k9s](https://k9scli.io/), [stern](https://github.com/wercker/stern), [jq](https://stedolan.github.io/jq/), [yq](https://mikefarah.gitbook.io/yq/), [gh](https://cli.github.com/):
-
-    ```sh
-    brew install kubernetes-cli danielfoehrkn/switch/switch tenv watch k9s stern jq yq gh
-    ```
-
 3. Install [Google Cloud SDK](https://cloud.google.com/sdk/):
 
    ```sh
    brew install google-cloud-sdk
-   ```
-
-   If you want to add the `gcloud` completion, you will need to
-   download [Cloud SDK package](https://cloud.google.com/sdk/docs/quickstart-macos) and place it in `$HOME/scripts` (
-   according to the current `.zshrc` configuration).
-
-    Also, if you want to work with GKE, you need to install the GKE plugin:
-    ```shell
-   gcloud components install gke-gcloud-auth-plugin
-    ```
-
-4. If relevant to test GitHub Actions pipeline locally, install [cat](https://github.com/nektos/act):
-   ```shell
-   brew install act
    ```
 
 # Terminal Applications
