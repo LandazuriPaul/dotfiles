@@ -6,11 +6,6 @@ Some development tools to complete the installation process.
 First, make sure that we went through the [INSTALL.md](./INSTALL.md) and have mise installed all languages and tools.
 
 - [CLI Tools](#cli-tools)
-  - [General](#general)
-  - [Python 3](#python-3)
-  - [Node.js](#nodejs)
-  - [Java](#java)
-  - [DevOps Tools](#devops-tools)
 - [Terminal Applications](#terminal-applications)
   - [Ghostty](#ghostty)
   - [iTerm2](#iterm2)
@@ -27,8 +22,6 @@ First, make sure that we went through the [INSTALL.md](./INSTALL.md) and have mi
   - [TablePlus](#tableplus)
 
 # CLI Tools
-
-## General
 
 1. For macOS, install the Xcode Command Line tools and GNU implementations of common CLI tools:
 
@@ -49,15 +42,7 @@ First, make sure that we went through the [INSTALL.md](./INSTALL.md) and have mi
    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
    ```
 
-## DevOps Tools
-
-1. Install [Docker](https://www.docker.com/) following this [link](https://download.docker.com/mac/stable/Docker.dmg).
-
-3. Install [Google Cloud SDK](https://cloud.google.com/sdk/):
-
-   ```sh
-   brew install google-cloud-sdk
-   ```
+4. Install [Docker](https://www.docker.com/) following this [link](https://download.docker.com/mac/stable/Docker.dmg).
 
 # Terminal Applications
 
