@@ -54,11 +54,11 @@ zinit snippet OMZP::sudo
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 
-# Load profile before completions
-source ~/.profile
-
 # Load completions
 autoload -Uz compinit && compinit
+
+# Load profile
+source ~/.profile
 
 zinit cdreplay -q
 
