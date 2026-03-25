@@ -24,9 +24,13 @@ kubectl = "latest"
 kubeswitch = "latest"
 stern = "latest"
 
-# Dotfiles
-chezmoi = "latest"
-
 # GitHub
 act = "latest"
 gh = "latest"
+
+# Dotfiles
+chezmoi = "latest"
+
+# Password Managers
+1password-cli = "latest"
+bitwarden = "latest"
