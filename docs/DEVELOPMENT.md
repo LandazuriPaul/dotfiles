@@ -30,9 +30,9 @@ First, make sure that we went through the [INSTALL.md](./INSTALL.md) and have mi
    brew install grep gnu-sed
    ```
 
-2. Install utilities via brew [btop](https://github.com/aristocratos/btop):
+2. Install utilities via brew [btop](https://github.com/aristocratos/btop), [worktrunk](https://worktrunk.dev/) (for some reason, not available on mise):
    ```sh
-   brew install btop
+   brew install btop worktrunk
    ```
 
 3. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm)):
