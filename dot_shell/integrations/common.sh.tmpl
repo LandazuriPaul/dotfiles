@@ -26,12 +26,6 @@ if [ -x "$(command -v wt)" ]; then
     eval "$(command wt config shell init zsh)";
 fi
 
-# Task completion
-if [ -x "$(command -v task)" ]; then
-    autoload -U compinit
-    compinit -i
-fi
-
 if [ -x "$(command -v ngrok)" ]; then
     eval "$(ngrok completion)"
 fi
