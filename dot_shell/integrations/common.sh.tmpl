@@ -13,45 +13,6 @@ if [ -x "$(command -v zoxide)" ]; then
 fi
 
 # ---
-# --- Languages
-# ---
-
-# Rust integration
-if [ -f "$HOME/.cargo/env" ]; then
-    . "$HOME/.cargo/env"
-fi
-
-# Go integration
-if [ -x "$(command -v go)" ]; then
-    export PATH="$(go env GOROOT)/bin:$PATH"
-fi
-
-# Pyenv integration
-if [ -x "$(command -v pyenv)" ]; then
-  eval "$(pyenv init -)"
-fi
-
-# jEnv integration
-if [ -x "$(command -v jenv)" ]; then
-    eval "$(jenv init -)"
-fi
-
-# sdkman integration
-if [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
-    source "$HOME/.sdkman/bin/sdkman-init.sh"
-fi
-
-# nvm
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-    source "$NVM_DIR/nvm.sh"
-fi
-
-# Bun
-if [ -s "$HOME/.bun/_bun" ]; then
-    source "$HOME/.bun/_bun";
-fi
-
-# ---
 # --- Tools
 # ---
 
