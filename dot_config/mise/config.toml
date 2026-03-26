@@ -34,3 +34,7 @@ chezmoi = "latest"
 # Password Managers
 1password-cli = "latest"
 bitwarden = "latest"
+
+# AI tools
+opencode = "latest"
+claude = "latest"
