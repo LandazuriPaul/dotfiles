@@ -1,4 +1,8 @@
 # Global hotkey for quick terminal
 keybind = global:alt+space=toggle_quick_terminal
 
+# Delete line
 keybind = super+backspace=text:\x15
+
+# Delete word
+keybind = opt+backspace=text:\x1b\x7f
