@@ -28,9 +28,6 @@ stern = "latest"
 act = "latest"
 gh = "latest"
 
-# Dotfiles
-chezmoi = "latest"
-
 # Password Managers
 1password-cli = "latest"
 bitwarden = "latest"

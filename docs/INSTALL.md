@@ -37,18 +37,14 @@ sudo apt-get install build-essential
 Some dependencies:
 
 ```shell
-brew install git gcc gpg mise
+brew install git gcc gpg mise chezmoi
 ```
 
 Explanations:
 - `git`, `gcc` and `gpg` might be already installed, but `brew` has access to more recent versions and uses them internally.
 - `mise` is a tool version manager and much more. See [mise website](https://mise.jdx.dev).
+- `chezmoi` is the dotfile tool in charge of initialising and maintaining your dotfiles. See [chezmoi](https://www.chezmoi.io/).
 
-Once `mise` is installed, install all remaining dependencies:
-
-```shell
-mise install
-```
 
 ### Password Managers
 
@@ -73,7 +69,16 @@ chezmoi init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
 
 Once you have run this command, the `dotfiles` should be installed.
 
-Just launch a new session and all the zsh extensions should be installed for you and you should be good to go!
+## Tool Installation
+
+With `mise` installed and its configuration available with the above dotfiles initialisation, you can install the remaining dependencies with the below command.
+You can check and change them in [mise.toml](../dot_config/mise/config.toml):
+
+```shell
+mise install
+```
+
+Now your terminal is fully ready and you can just launch a new session, you're good to go!
 
 ---
 
