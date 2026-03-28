@@ -1,4 +1,8 @@
 # Color theme
+# A good light theme: Adwaita
+# A good dark theme: Banana Blueberry
+# To have the theme follow the current desktop environment's theme
+# theme = light:Adwaita,dark:Banana Blueberry
 theme = Banana Blueberry
 
 # Unfocused splits
