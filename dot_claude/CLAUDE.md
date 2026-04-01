@@ -16,7 +16,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## CLI Tools
 
 - Use `rg` not `grep`
-- Use `fd` instead of `find`
+- Use `fd` not `find`
 
 ## Language
 
