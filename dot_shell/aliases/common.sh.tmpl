@@ -3,13 +3,16 @@ alias cm='chezmoi'
 alias cmlogin='. ~/.shell/scripts/cm-login'
 
 # General aliases
-alias git='LANG=en_GB.UTF-8 git'
 alias nv='nvim'
 alias l='ll'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+
+# Versioning aliases
+alias git='LANG=en_GB.UTF-8 git'
+alias wtc='wt switch -c'
 
 # Network
 alias ports='sudo lsof -i -P -n | grep1 LISTEN'
