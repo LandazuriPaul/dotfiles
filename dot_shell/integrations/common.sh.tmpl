@@ -1,7 +1,11 @@
 # Mise
 # First, so that tools installed via mise can be resolved.
+# activate zsh: hooks-based, resolves tool paths dynamically in interactive shells.
+# activate zsh --shims: adds shims to PATH for non-interactive shells (Claude Code, scripts)
+#   where precmd/chpwd hooks don't fire. Must come AFTER activate, which resets PATH.
 if [ -x "$(command -v mise)" ]; then
-  eval "$(mise activate zsh)";
+  eval "$(mise activate zsh)"
+  eval "$(mise activate zsh --shims)"
 fi
 
 # ---
