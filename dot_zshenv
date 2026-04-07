@@ -1,0 +1,14 @@
+# Non-interactive shell setup (Claude Code, scripts, etc.)
+# Full interactive setup lives in .shell/integrations/common.sh via .profile.
+
+# mise: shims-based activation (no shell hooks needed)
+if [ -x "$(command -v mise)" ]; then
+  eval "$(mise activate zsh --shims)"
+fi
+
+# zoxide: cd alias for non-interactive shells
+# _ZO_DOCTOR=0 suppresses the init-order warning (we intentionally init early here)
+if [ -x "$(command -v zoxide)" ]; then
+  export _ZO_DOCTOR=0
+  eval "$(zoxide init --cmd cd zsh)"
+fi
