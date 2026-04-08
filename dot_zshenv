@@ -6,3 +6,6 @@
 
 # Suppress zoxide init-order warning (we intentionally init early, before .profile)
 export _ZO_DOCTOR=0
+
+# AWS Granted
+alias assume=". assume"
