@@ -26,5 +26,6 @@
     "claude-code-setup@claude-plugins-official": true
   },
   "model": "opus",
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "agentPushNotifEnabled": true
 }
