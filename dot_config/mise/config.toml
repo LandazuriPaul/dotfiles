@@ -1,6 +1,6 @@
 [settings]
 
-# config files with these prefixes will be trusted by default
+# Config files with these prefixes will be trusted by default
 trusted_config_paths = [
     '~/dev',
 ]
