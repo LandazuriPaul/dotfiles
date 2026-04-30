@@ -7,11 +7,25 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": false,
+    },
+  },
+  "git_panel": {
+    "dock": "left",
+  },
   "colorize_brackets": true,
   "agent": {
+    "dock": "left",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+      "provider": "anthropic",
+      "model": "opus",
     },
     "model_parameters": [],
   },
