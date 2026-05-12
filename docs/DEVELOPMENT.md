@@ -80,6 +80,8 @@ command. To do this as seamlessly as possible, I attached this action to a custo
 
 [Zed](https://zed.dev/) is a very fast and modern editor.
 
+On macOS, once installed, be sure to install the CLI binary: [see official docs](https://zed.dev/docs/reference/cli#installation). 
+
 ## Visual Studio Code
 
 ### Settings and extensions
