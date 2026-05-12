@@ -9,8 +9,9 @@ theme = Banana Blueberry
 unfocused-split-fill = 222200
 
 # Quick terminal settings
-quick-terminal-screen = macos-menu-bar
+quick-terminal-screen = mouse
 quick-terminal-autohide = false
+quick-terminal-size = 100%
 
 # Confirm on quit
 confirm-close-surface = always
