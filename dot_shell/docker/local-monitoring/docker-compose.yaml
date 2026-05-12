@@ -1,0 +1,19 @@
+name: local-monitoring
+
+services:
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    restart: unless-stopped
+    ports:
+      - "8888:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - dozzle_data:/data
+    environment:
+      # Enable container actions (stop, start, restart). See https://dozzle.dev/guide/actions
+      - DOZZLE_ENABLE_ACTIONS=true
+      # Allow access to container shells. See https://dozzle.dev/guide/shell
+      - DOZZLE_ENABLE_SHELL=true
+volumes:
+  dozzle_data:

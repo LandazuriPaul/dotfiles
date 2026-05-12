@@ -1,8 +1,31 @@
+# Grep for the first line matching a pattern
 grep1() {
   awk -v pattern="${1:?pattern is empty}" 'NR==1 || $0~pattern' "${2:-/dev/stdin}";
 }
 
+# Take a directory and cd into it, creating it if it doesn't exist
 take() {
   mkdir -p "$1"
    cd "$1" || exit
 }
+
+# Start Dozzle if Docker is available
+if [ -x "$(command -v docker)" ]; then
+  dozzle() {
+    local compose_file="$HOME/.shell/docker/local-monitoring/docker-compose.yaml"
+    local url="http://localhost:8888"
+
+    docker compose -f "$compose_file" up -d dozzle || return $?
+
+    # macOS open
+    if command -v open >/dev/null 2>&1; then
+      open "$url"
+    # Linux open
+    elif command -v xdg-open >/dev/null 2>&1; then
+      xdg-open "$url"
+    # Fallback
+    else
+      echo "Dozzle is running at $url"
+    fi
+  }
+fi
