@@ -30,19 +30,12 @@ First, make sure that we went through the [INSTALL.md](./INSTALL.md) and have mi
    brew install grep gnu-sed
    ```
 
-2. Install some utilities via brew [btop](https://github.com/aristocratos/btop), [worktrunk](https://worktrunk.dev/), [dtop](https://dtop.dev/), [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/):
+2. Install some utilities via brew [btop](https://github.com/aristocratos/btop), [worktrunk](https://worktrunk.dev/), [dtop](https://dtop.dev/):
    ```sh
-   brew install btop worktrunk dtop docker docker-compose
+   brew install btop worktrunk dtop
    ```
 
-3. Link `docker-compose` into Docker's CLI-plugin directory so docker compose ... (subcommand form) resolves to it. Homebrew installs the binary on PATH but does not create this symlink:
-
-   ```sh
-   mkdir -p ~/.docker/cli-plugins
-   ln -sfn "$(brew --prefix)/opt/docker-compose/bin/docker-compose" ~/.docker/cli-plugins/docker-compose
-   ```
-
-4. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm)):
+3. Install [tmux](https://github.com/tmux/tmux) and [its package manager](https://github.com/tmux-plugins/tpm)):
 
    ```sh
    mkdir -p $HOME/.tmux/plugins

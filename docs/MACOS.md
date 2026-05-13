@@ -62,6 +62,18 @@ Then you can assign a shortcut to this service in the System Preferences > Keybo
 
 ## Apps
 
+### Docker and Colima Integration
+
+I don't use Docker Desktop, but rather Colima (see [config.toml](../dot_config/mise/config.toml)).
+
+Colima exposes its socket at `~/.colima/default/docker.sock` and registers a Docker context for it, so `docker`, `docker compose`, Dozzle, and Testcontainers all work out of the box. Host-side tools that hard-code `/var/run/docker.sock` (e.g. `dtop`, some `lazydocker` configs) need the legacy path Docker Desktop used to provide. Recreate it once with:
+
+```bash
+sudo ln -sfn "$HOME/.colima/default/docker.sock" /var/run/docker.sock
+```
+
+The symlink survives reboots and Colima restarts.
+
 ### VLC
 
 To be able to run multiple instances of VLC at the same time, save the below code as a new app (e.g. `VLC droplet.app`) via the AppleScript Editor:
