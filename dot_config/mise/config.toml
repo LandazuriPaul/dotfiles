@@ -18,6 +18,13 @@ rg = "latest"
 tmux = "latest"
 yq = "latest"
 
+# Container tools
+"aqua:abiosoft/colima" = "latest"
+"aqua:lima-vm/lima" = "latest"
+"aqua:docker/cli" = "latest"
+"aqua:docker/compose" = "latest"
+"aqua:docker/buildx" = "latest"
+
 # Kubernetes
 k9s = "latest"
 kubectl = "latest"
