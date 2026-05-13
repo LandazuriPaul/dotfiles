@@ -1,11 +1,12 @@
 [settings]
-
 # Config files with these prefixes will be trusted by default
 trusted_config_paths = [
     '~/dev',
 ]
+{{ if eq .chezmoi.os "darwin" -}}
 # Required for the `[hooks]` block below — mise currently flags hooks as experimental
 experimental = true
+{{- end }}
 
 [tools]
 # Basic tools
@@ -19,13 +20,6 @@ neovim = "latest"
 rg = "latest"
 tmux = "latest"
 yq = "latest"
-
-# Container tools
-"aqua:abiosoft/colima" = "latest"
-"aqua:lima-vm/lima" = "latest"
-"aqua:docker/cli" = "latest"
-"aqua:docker/compose" = "latest"
-"aqua:docker/buildx" = "latest"
 
 # Kubernetes
 k9s = "latest"
@@ -45,6 +39,14 @@ bitwarden = "latest"
 opencode = "latest"
 claude = "latest"
 
+{{ if eq .chezmoi.os "darwin" -}}
+# Container runtime tools
+"aqua:abiosoft/colima" = "latest"
+"aqua:lima-vm/lima" = "latest"
+"aqua:docker/cli" = "latest"
+"aqua:docker/compose" = "latest"
+"aqua:docker/buildx" = "latest"
+
 # Symlink mise-installed Docker CLI plugins into ~/.docker/cli-plugins/.
 # Docker discovers subcommand plugins (e.g. `docker compose`) only from that directory, not from PATH. mise shims use argv[0] to dispatch and can't be symlinked under a different name, so we link the resolved binary instead.
 # The postinstall hook re-runs this after every `mise install` / `mise upgrade` to refresh the (versioned) target path.
@@ -59,3 +61,4 @@ ln -sfn "$(mise which docker-cli-plugin-docker-buildx)" ~/.docker/cli-plugins/do
 
 [hooks]
 postinstall = "mise run link-docker-cli-plugins"
+{{- end }}
