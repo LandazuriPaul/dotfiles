@@ -10,8 +10,8 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-o": "projects::OpenRecent",
-      "cmd-b": "workspace::ToggleRightDock"
-    }
+      "cmd-b": "workspace::ToggleRightDock",
+    },
   },
   {
     "context": "Editor",
@@ -21,23 +21,33 @@
       "cmd-d": "editor::DuplicateLineDown",
       "ctrl-g": ["editor::SelectNext", { "replace_newest": false }],
       "cmd-ctrl-g": "editor::SelectAllMatches",
-      "cmd-shift-backspace": "editor::DeleteLine"
-    }
+      "cmd-shift-backspace": "editor::DeleteLine",
+    },
   },
   {
     "bindings": {
-      "cmd-d": "editor::DuplicateSelection"
-    }
+      "cmd-d": "editor::DuplicateSelection",
+    },
   },
   {
     "bindings": {
-      "cmd-shift-w": null
-    }
+      "cmd-shift-w": null,
+    },
   },
   {
     "context": "!ContextEditor > (Editor && mode == full)",
     "bindings": {
-      "cmd-shift-w": "pane::RevealInProjectPanel"
-    }
-  }
+      "cmd-shift-w": "pane::RevealInProjectPanel",
+    },
+  },
+  {
+    "bindings": {
+      "fn-escape": "window::ShowNextWindowTab",
+    },
+  },
+  {
+    "bindings": {
+      "fn-shift-escape": "window::ShowPreviousWindowTab",
+    },
+  },
 ]
