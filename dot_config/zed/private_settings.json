@@ -7,7 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "cli_default_open_behavior": "new_window",
+  "agent": {
+    "dock": "left",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "opus",
+    },
+    "model_parameters": [],
+  },
   "agent_servers": {
     "claude-acp": {
       "favorite_config_option_values": {
@@ -17,6 +24,7 @@
       "type": "registry",
     },
   },
+  "buffer_font_size": 16,
   "git": {
     "inline_blame": {
       "show_commit_summary": false,
@@ -26,17 +34,15 @@
     "tree_view": true,
     "dock": "left",
   },
-  "colorize_brackets": true,
-  "agent": {
-    "dock": "left",
-    "default_model": {
-      "provider": "anthropic",
-      "model": "opus",
-    },
-    "model_parameters": [],
-  },
+  "cli_default_open_behavior": "new_window",
   "collaboration_panel": {
     "dock": "right",
+  },
+  "colorize_brackets": true,
+  "confirm_quit": true,
+  "file_types": {
+    "Shell Script": ["*.sh.tmpl", "*rc.tmpl"],
+    "Helm": ["*.tmpl.yaml"],
   },
   "outline_panel": {
     "dock": "right",
@@ -44,18 +50,13 @@
   "project_panel": {
     "dock": "right",
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
   "theme": {
     "mode": "system",
     "light": "One Dark",
     "dark": "One Dark",
   },
-  "confirm_quit": true,
-  "file_types": {
-    "Shell Script": ["*.sh.tmpl", "*rc.tmpl"],
-    "Helm": ["*.tmpl.yaml"],
-  },
-  "terminal": { "font_family": "MesloLGS NF" },
   "soft_wrap": "editor_width",
+  "terminal": { "font_family": "MesloLGS NF" },
+  "ui_font_size": 16,
+  "use_system_window_tabs": true,
 }
