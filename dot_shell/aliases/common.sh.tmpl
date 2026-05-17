@@ -16,30 +16,16 @@ alias wtc='wt switch -c'
 
 # Network
 alias ports='sudo lsof -i -P -n | grep1 LISTEN'
+alias ts='tailscale'
 
 # Dev specifics
 alias tmp='cd ~/dev/tmp/'
 alias dev='cd ~/dev/'
 
-# Yarn
-alias yb='yarn build'
-alias yd='yarn dev'
-alias yw='yarn watch'
-alias ys='yarn start'
-alias ysd='yarn start:dev'
-alias ysp='yarn start:prod'
-
-# NPM
-alias ns='npm run start'
-alias nsd='npm run start:dev'
-alias nsp='npm run start:prod'
-alias nb='npm run build'
-
 # DevOps tools
 alias kb='kubectl'
 alias dc='docker compose'
 alias actg='act -s GITHUB_TOKEN=$(gh auth token)'
-alias kubectx='switch' # for backward compatibility with integrations
 
 # AI tools
 alias cl="claude"
