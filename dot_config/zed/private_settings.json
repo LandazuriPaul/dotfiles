@@ -41,7 +41,7 @@
   "colorize_brackets": true,
   "confirm_quit": true,
   "file_types": {
-    "Shell Script": ["*.sh.tmpl", "*rc.tmpl"],
+    "Shell Script": ["*.sh.tmpl", "*rc.tmpl", "*.env", ".env.*"],
     "Helm": ["*.tmpl.yaml"],
   },
   "outline_panel": {
