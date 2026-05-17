@@ -7,6 +7,14 @@
 // from the command palette.
 [
   {
+    "bindings": {
+      "cmd-d": "editor::DuplicateSelection",
+      "cmd-shift-w": null,
+      "fn-escape": "window::ShowNextWindowTab",
+      "fn-shift-escape": "window::ShowPreviousWindowTab",
+    },
+  },
+  {
     "context": "Workspace",
     "bindings": {
       "ctrl-o": "projects::OpenRecent",
@@ -22,32 +30,26 @@
       "ctrl-g": ["editor::SelectNext", { "replace_newest": false }],
       "cmd-ctrl-g": "editor::SelectAllMatches",
       "cmd-shift-backspace": "editor::DeleteLine",
+      "alt-q": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false,
+        },
+      ],
     },
-  },
-  {
-    "bindings": {
-      "cmd-d": "editor::DuplicateSelection",
-    },
-  },
-  {
-    "bindings": {
-      "cmd-shift-w": null,
+    "unbind": {
+      "cmd-:": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false,
+        },
+      ],
     },
   },
   {
     "context": "!ContextEditor > (Editor && mode == full)",
     "bindings": {
       "cmd-shift-w": "pane::RevealInProjectPanel",
-    },
-  },
-  {
-    "bindings": {
-      "fn-escape": "window::ShowNextWindowTab",
-    },
-  },
-  {
-    "bindings": {
-      "fn-shift-escape": "window::ShowPreviousWindowTab",
     },
   },
 ]
