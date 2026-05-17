@@ -25,6 +25,9 @@
     },
   },
   "buffer_font_size": 16,
+  "file_finder": {
+    "include_ignored": "indexed",
+  },
   "git": {
     "inline_blame": {
       "show_commit_summary": false,
@@ -50,12 +53,15 @@
   "project_panel": {
     "dock": "right",
   },
+  "search": {
+    "include_ignored": true,
+  },
+  "soft_wrap": "editor_width",
   "theme": {
     "mode": "system",
     "light": "One Dark",
     "dark": "One Dark",
   },
-  "soft_wrap": "editor_width",
   "terminal": { "font_family": "MesloLGS NF" },
   "ui_font_size": 16,
   "use_system_window_tabs": true,
