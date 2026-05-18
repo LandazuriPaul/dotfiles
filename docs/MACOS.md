@@ -66,6 +66,12 @@ Then you can assign a shortcut to this service in the System Preferences > Keybo
 
 I don't use Docker Desktop, but rather Colima (see [config.toml](../dot_config/mise/config.toml)).
 
+To start the Colima VM, run:
+
+```bash
+colima start
+```
+
 Colima exposes its socket at `~/.colima/default/docker.sock` and registers a Docker context for it, so `docker`, `docker compose`, Dozzle, and Testcontainers all work out of the box. Host-side tools that hard-code `/var/run/docker.sock` (e.g. `dtop`, some `lazydocker` configs) need the legacy path Docker Desktop used to provide. Recreate it once with:
 
 ```bash
