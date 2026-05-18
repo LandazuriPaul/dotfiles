@@ -30,6 +30,7 @@
       "ctrl-g": ["editor::SelectNext", { "replace_newest": false }],
       "cmd-ctrl-g": "editor::SelectAllMatches",
       "cmd-shift-backspace": "editor::DeleteLine",
+      "cmd-shift-c": "workspace::CopyRelativePath",
       "alt-q": [
         "editor::ToggleComments",
         {
