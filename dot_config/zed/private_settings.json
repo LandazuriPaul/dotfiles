@@ -44,8 +44,14 @@
   "colorize_brackets": true,
   "confirm_quit": true,
   "file_types": {
-    "Shell Script": ["*.sh.tmpl", "*rc.tmpl", "*.env", ".env.*"],
     "Helm": ["*.tmpl.yaml"],
+    "JSONC": [
+      "**/.zed/*.json",
+      "**/.vscode/**/*.json",
+      "**/{zed,Zed}/*{settings,keymap,tasks,debug}*.json",
+      "tsconfig*.json",
+    ],
+    "Shell Script": ["*.sh.tmpl", "*rc.tmpl", "*.env", ".env.*"],
   },
   "outline_panel": {
     "dock": "right",
@@ -59,8 +65,8 @@
   "soft_wrap": "editor_width",
   "theme": {
     "mode": "system",
-    "light": "One Dark",
     "dark": "One Dark",
+    "light": "One Light",
   },
   "terminal": { "font_family": "MesloLGS NF" },
   "ui_font_size": 16,
