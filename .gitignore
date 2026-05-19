@@ -1,3 +1,9 @@
 # IDEs
 .idea/
 .vscode/
+
+# AI Agentic tools
+.claude/settings.local.json
+.claude/conversations.local/
+.claude/plans.local/
+.claude/worktrees/
