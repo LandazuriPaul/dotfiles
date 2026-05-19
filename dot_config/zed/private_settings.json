@@ -53,6 +53,7 @@
     ],
     "Shell Script": ["*.sh.tmpl", "*rc.tmpl", "*.env", ".env.*"],
   },
+  "icon_theme": "Zed (Default)",
   "outline_panel": {
     "dock": "right",
   },
@@ -64,7 +65,7 @@
   },
   "soft_wrap": "editor_width",
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "dark": "One Dark",
     "light": "One Light",
   },
