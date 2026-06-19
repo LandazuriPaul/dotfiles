@@ -15,7 +15,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## CLI Tools
 
-- Use `rg` not `grep`
+- Use `rg` not `grep`. Be aware that the `-r` is `rg`'s replacement flag and that `rg` searches a directory recursively by default.
 - Use `fd` not `find`
 - Dotfiles are managed with `chezmoi`. Source of truth is `~/.local/share/chezmoi/`. Never edit dotfiles in `~/` directly — edit the chezmoi source and run `chezmoi apply`. Chezmoi naming: `dot_` prefix for dotfiles, `executable_` prefix for +x, `.tmpl` suffix for templates.
 
