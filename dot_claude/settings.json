@@ -28,5 +28,6 @@
   },
   "model": "opus",
   "effortLevel": "high",
+  "theme": "auto",
   "agentPushNotifEnabled": true
 }
