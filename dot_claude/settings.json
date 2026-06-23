@@ -24,7 +24,8 @@
     "pr-review-toolkit@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true,
     "claude-code-setup@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "nx@nx-claude-plugins": true
   },
   "model": "opus",
   "effortLevel": "high",
