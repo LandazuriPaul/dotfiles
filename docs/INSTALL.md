@@ -37,13 +37,12 @@ sudo apt-get install build-essential
 Some dependencies:
 
 ```shell
-brew install git gcc gpg mise chezmoi
+brew install git gcc gpg mise
 ```
 
 Explanations:
 - `git`, `gcc` and `gpg` might be already installed, but `brew` has access to more recent versions and uses them internally.
 - `mise` is a tool version manager and much more. See [mise website](https://mise.jdx.dev).
-- `chezmoi` is the dotfile tool in charge of initialising and maintaining your dotfiles. See [chezmoi](https://www.chezmoi.io/).
 
 
 ### Password Managers
