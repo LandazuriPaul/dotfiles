@@ -24,3 +24,6 @@ window-new-tab-position = end
 
 # Save window state
 window-save-state = always
+
+# Notify on finised commands only when unfocused
+notify-on-command-finish = unfocused
