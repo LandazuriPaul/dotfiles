@@ -4,6 +4,9 @@
     "commit": "",
     "pr": ""
   },
+  "permissions": {
+    "deny": ["Read(*.env*)", "Edit(*.env*)"]
+  },
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/status-line.sh"
