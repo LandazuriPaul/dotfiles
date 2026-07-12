@@ -4,7 +4,7 @@ Include ~/.colima/ssh_config
 
 {{ if eq .hostname "paul-enapi" "blastoise" -}}
 {{ onepasswordRead "op://private/ssh_config/ssh_config.sh" .onepassword.enapi }}
-{{ (bitwarden "item" "ssh-config").notes }}
+{{ onepasswordRead "op://private/ssh_config/ssh_config.sh" .onepassword.landazuri }}
 {{- end }}
 
 # Force basic colours for ghostty terminal

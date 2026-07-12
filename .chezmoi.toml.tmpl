@@ -14,5 +14,6 @@
 # local config (not committed), so account UUIDs stay out of this repo.
 # Use the USER ID column of `op account list`.
 [data.onepassword]
-    mfc = {{ promptStringOnce . "onepassword.mfc" "1Password mfc account UUID" | quote }}
-    enapi = {{ promptStringOnce . "onepassword.enapi" "1Password enapi account UUID" | quote }}
+    mfc = {{ promptStringOnce . "onepassword.mfc" "1Password MyFoodCourt account UUID" | quote }}
+    enapi = {{ promptStringOnce . "onepassword.enapi" "1Password ENAPI account UUID" | quote }}
+    landazuri = {{ promptStringOnce . "onepassword.landazuri" "1Password Landázuri account UUID" | quote }}

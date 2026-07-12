@@ -9,11 +9,11 @@ alias magick-heic='magick mogrify -format heic -depth 10 -path .. -delete 1,1 *.
 #### sensitive aliases
 
 {{- if eq .hostname "paul-enapi" "blastoise" -}}
-{{ (bitwarden "item" "laptop-aliases").notes }}
+{{ onepasswordRead "op://private/laptop_aliases/laptop_aliases.sh" .onepassword.landazuri }}
 {{- end }}
 
 {{- if eq .hostname "vps-6a39a9e0" -}}
-{{ (bitwarden "item" "vps-aliases").notes }}
+{{ onepasswordRead "op://private/vps_aliases/vps_aliases.sh" .onepassword.landazuri }}
 {{- end }}
 
 {{- end }}

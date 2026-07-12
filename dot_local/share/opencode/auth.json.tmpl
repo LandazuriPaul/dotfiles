@@ -1,6 +1,6 @@
 {
   "openrouter": {
     "type": "api",
-    "key": "{{ (get (bitwardenFields "item" "OpenRouter") "OpenCode API Key").value }}"
+    "key": "{{ onepasswordRead "op://private/OpenRouter - OpenCode/token" .onepassword.landazuri }}"
   }
 }

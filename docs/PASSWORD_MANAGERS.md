@@ -10,11 +10,11 @@ This achieves 2 main goals:
 
 ## CLI & Desktop Apps
 
-The CLI version of each password manager connected to chezmoi is required.
+The 1Password CLI connected to chezmoi is required.
 
-For a server, you only need the CLI versions.
+For a server, you only need the CLI version.
 
-For a laptop, you'll want to install them alongside the desktop versions.
+For a laptop, you'll want to install it alongside the desktop version.
 
 ## 1Password
 
@@ -43,18 +43,24 @@ To keep the UUIDs out of this public repository, they are not hard-coded. The
 config template [`.chezmoi.toml.tmpl`](../.chezmoi.toml.tmpl) prompts for them
 once per machine via `promptStringOnce` and stores them in the local, uncommitted
 `~/.config/chezmoi/chezmoi.toml` under `[data.onepassword]`. Templates then refer
-to them by readable name — `.onepassword.mfc` and `.onepassword.enapi` — e.g.:
+to them by readable name — `.onepassword.mfc`, `.onepassword.enapi` and
+`.onepassword.landazuri` — e.g.:
 
 ```
-{{ onepasswordRead "op://private/kubeconfig/mfc.yaml" .onepassword.mfc }}
+{{ onepasswordRead "op://private/mfc_kubeconfig/mfc_kubeconfig.yaml" .onepassword.mfc }}
 ```
 
 This repository expects these accounts:
 
-| Name    | Sign-in address       | Account     |
-| ------- | --------------------- | ----------- |
-| `mfc`   | `my.1password.com`    | MyFoodCourt |
-| `enapi` | `enapi.1password.com` | ENAPI       |
+| Name        | Sign-in address       | Account                        |
+| ----------- | --------------------- | ------------------------------ |
+| `mfc`       | `my.1password.com`    | MyFoodCourt                    |
+| `enapi`     | `enapi.1password.com` | ENAPI                          |
+| `landazuri` | `my.1password.com`    | Landázuri (1Password Families) |
+
+Note that `mfc` and `landazuri` share the `my.1password.com` sign-in address,
+which is exactly why the account UUID (not the address) is used as the
+identifier.
 
 Set them up on a new machine:
 
@@ -74,11 +80,7 @@ Set them up on a new machine:
    ```sh
    op whoami --account <mfc-uuid>
    op whoami --account <enapi-uuid>
+   op whoami --account <landazuri-uuid>
    ```
 
 Once the UUIDs are set, `cm-login` and `chezmoi apply` work as intended.
-
-## Bitwarden
-
-- [CLI instructions](https://bitwarden.com/help/cli/)
-- [Desktop instructions](https://bitwarden.com/download/)
