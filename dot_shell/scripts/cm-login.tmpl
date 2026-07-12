@@ -1,6 +1,6 @@
 #!/bin/bash
 
-{{ if eq .chezmoi.hostname "blastoise" "vps-6a39a9e0" -}}
+{{ if eq .chezmoi.hostname "blastoise" "raichu" -}}
 echo "> Log in to 1Password (landazuri)"
 eval $(op signin --account {{ .onepassword.landazuri }})
 
