@@ -1,6 +1,6 @@
 #!/bin/bash
 
-{{ if eq .chezmoi.hostname "blastoise" "raichu" -}}
+{{ if eq .hostname "blastoise" "raichu" -}}
 echo "> Log in to 1Password (landazuri)"
 eval $(op signin --account {{ .onepassword.landazuri }})
 
@@ -8,7 +8,7 @@ echo "> Log in to 1Password (mfc)"
 eval $(op signin --account {{ .onepassword.mfc }})
 {{- end }}
 
-{{ if eq .chezmoi.hostname "paul-enapi" "blastoise" -}}
+{{ if eq .hostname "paul-enapi" "blastoise" -}}
 echo "> Log in to 1Password (enapi)"
 eval $(op signin --account {{ .onepassword.enapi }})
 {{- end }}
