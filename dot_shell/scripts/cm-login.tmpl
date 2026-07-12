@@ -12,11 +12,11 @@ export BW_SESSION
 
 # 1Password
 {{ if eq .chezmoi.hostname "blastoise" "vps-6a39a9e0" -}}
-echo "> Log in to 1Password (my.1password.com)"
-eval $(op signin --account my.1password.com)
+echo "> Log in to 1Password (mfc)"
+eval $(op signin --account {{ .onepassword.mfc }})
 {{- end }}
 
 {{ if eq .chezmoi.hostname "paul-enapi" "blastoise" -}}
-echo "> Log in to 1Password (enapi.1password.com)"
-eval $(op signin --account enapi.1password.com)
+echo "> Log in to 1Password (enapi)"
+eval $(op signin --account {{ .onepassword.enapi }})
 {{- end }}

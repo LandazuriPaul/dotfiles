@@ -3,7 +3,7 @@ Include ~/.colima/ssh_config
 {{- end }}
 
 {{ if eq .hostname "paul-enapi" "blastoise" -}}
-{{ onepasswordRead "op://private/ssh_config/ssh_config.sh" "enapi.1password.com" }}
+{{ onepasswordRead "op://private/ssh_config/ssh_config.sh" .onepassword.enapi }}
 {{ (bitwarden "item" "ssh-config").notes }}
 {{- end }}
 

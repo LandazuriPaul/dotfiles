@@ -1,10 +1,18 @@
 [onepassword]
     prompt = false
 [data]
-    # This is a workaround for the
-    # hostname not being correctly read in Ubuntu
+
+# This is a workaround for the
+# hostname not being correctly read in Ubuntu
 {{- $hostname := .chezmoi.hostname -}}
 {{- if eq .chezmoi.os "linux" -}}
     {{ $hostname = output "hostname" | trim -}}
 {{- end }}
     hostname = "{{ $hostname }}"
+
+# 1Password account identifiers. Prompted once per machine and stored in the
+# local config (not committed), so account UUIDs stay out of this repo.
+# Use the USER ID column of `op account list`.
+[data.onepassword]
+    mfc = {{ promptStringOnce . "onepassword.mfc" "1Password mfc account UUID" | quote }}
+    enapi = {{ promptStringOnce . "onepassword.enapi" "1Password enapi account UUID" | quote }}
