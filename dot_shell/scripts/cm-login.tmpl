@@ -1,14 +1,16 @@
 #!/bin/bash
 
-{{ if eq .hostname "blastoise" "raichu" -}}
-echo "> Log in to 1Password (landazuri)"
+{{ if eq .hostname "blastoise" "raichu" "paul-enapi" -}}
+echo "> Log in to 1Password (Landázuri)"
 eval $(op signin --account {{ .onepassword.landazuri }})
+{{- end }}
 
-echo "> Log in to 1Password (mfc)"
+{{ if eq .hostname "blastoise" "raichu" -}}
+echo "> Log in to 1Password (MyFoodCourt)"
 eval $(op signin --account {{ .onepassword.mfc }})
 {{- end }}
 
 {{ if eq .hostname "paul-enapi" "blastoise" -}}
-echo "> Log in to 1Password (enapi)"
+echo "> Log in to 1Password (ENAPI)"
 eval $(op signin --account {{ .onepassword.enapi }})
 {{- end }}
