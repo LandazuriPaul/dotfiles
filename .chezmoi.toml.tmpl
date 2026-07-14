@@ -2,12 +2,12 @@
     prompt = false
 [data]
 
-# This is a workaround for the
-# hostname not being correctly read in Ubuntu
 {{- $hostname := .chezmoi.hostname -}}
 {{- if eq .chezmoi.os "linux" -}}
     {{ $hostname = output "hostname" | trim -}}
 {{- end }}
+    # This is a workaround for the
+    # hostname not being correctly read in Ubuntu
     hostname = "{{ $hostname }}"
 
 # 1Password account identifiers. Prompted once per machine and stored in the

@@ -1,0 +1,3 @@
+{{- if eq .hostname "raichu" -}}
+{{ onepasswordRead "op://raichu/raichu-ssh-key/public_key" .onepassword.landazuri }}
+{{- end }}

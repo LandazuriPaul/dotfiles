@@ -7,6 +7,13 @@ Include ~/.colima/ssh_config
 {{ onepasswordRead "op://private/ssh_config/ssh_config.sh" .onepassword.landazuri }}
 {{- end }}
 
-# Force basic colours for ghostty terminal
 Host *
+  # Force basic colours for ghostty terminal
   SetEnv TERM=xterm-256color
+{{- if eq .chezmoi.os "darwin" }}
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+{{- end }}
+{{- if eq .hostname "blastoise" "raichu" }}
+  IdentityFile ~/.ssh/{{ .hostname }}.pub
+  IdentitiesOnly yes
+{{- end }}
