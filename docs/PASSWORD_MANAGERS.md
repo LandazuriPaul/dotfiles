@@ -83,4 +83,4 @@ Set them up on a new machine:
    op whoami --account <landazuri-uuid>
    ```
 
-Once the UUIDs are set, `cm-login` and `chezmoi apply` work as intended.
+Once the UUIDs are set, `cm-login.sh` and `chezmoi apply` work as intended.
