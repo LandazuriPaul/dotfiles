@@ -51,12 +51,33 @@ See [PASSWORD_MANAGERS](./PASSWORD_MANAGERS.md).
 
 ### SSH Key
 
-- Generate a new SSH key:
-   ```sh
-   ssh-keygen -t ed25519 -C "your_email@example.com"
-   ```
+SSH keys are stored encrypted in 1Password (Landázuri account), one per machine,
+and never written to disk in plaintext. See [PASSWORD_MANAGERS](./PASSWORD_MANAGERS.md)
+for the account setup.
 
-- Register it in your GitHub account, in your [SSH settings](https://github.com/settings/keys).
+**Laptops (macOS):**
+
+- Turn on the agent: 1Password → Settings → Developer → "Use the SSH Agent" + Touch ID.
+- Generate the machine's key: New Item → SSH Key → Generate → Ed25519, titled
+  `<hostname>-ssh-key` (e.g. `blastoise-ssh-key`).
+- Add its public key to GitHub ([SSH settings](https://github.com/settings/keys))
+  and to any servers' `authorized_keys`.
+- `~/.ssh/config` gets the agent socket and per-host key pins via chezmoi; the
+  public key is rendered to `~/.ssh/<hostname>.pub` (mode `0600`).
+
+**Headless servers (e.g. raichu):**
+
+The Touch ID agent is desktop-only, so a headless host uses a read-only 1Password
+**service account** instead:
+
+- Keep the server's key in a dedicated vault (`raichu`) and generate a service
+  account scoped read-only to it.
+- Store the token as a `raichu-service-account` Password item in the Landázuri
+  `Private` vault; chezmoi renders it to `~/.config/op/raichu.token` (`0600`,
+  read via the interactive landázuri session, so no dependency on SSH).
+- On login, `~/.shell/env/raichu.sh` starts a persistent user `ssh-agent` and runs
+  `~/.shell/scripts/load-ssh-key`, which pipes the key from 1Password into the
+  agent (`op read … | ssh-add -`). The key stays in memory only.
 
 ## Repository
 

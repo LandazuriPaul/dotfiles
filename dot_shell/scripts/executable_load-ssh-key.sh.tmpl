@@ -1,0 +1,28 @@
+{{ if eq .hostname "raichu" -}}
+#!/bin/bash
+# Load raichu's SSH key from 1Password into the running ssh-agent, in memory.
+#
+# raichu is headless. A read-only service account (token at ~/.config/op/raichu.token,
+# scoped to the `raichu` vault) lets `op` fetch the key non-interactively;
+# it is piped straight into the agent and never written to disk.
+#
+# Idempotent: exits early if the agent already holds a key. Safe to call from a
+# shell login or an unattended job. Requires SSH_AUTH_SOCK to point at the agent.
+set -euo pipefail
+
+token_file="$HOME/.config/op/raichu.token"
+key_ref="op://raichu/raichu-ssh-key/private_key?ssh-format=openssh"
+
+if [ ! -r "$token_file" ]; then
+    echo "load-ssh-key: service-account token $token_file not found" >&2
+    exit 1
+fi
+
+# raichu's agent only ever holds this one key, so any loaded identity means done.
+if ssh-add -l >/dev/null 2>&1; then
+    exit 0
+fi
+
+OP_SERVICE_ACCOUNT_TOKEN="$(cat "$token_file")" op read "$key_ref" | ssh-add - >/dev/null
+echo "load-ssh-key: raichu key loaded into ssh-agent" >&2
+{{- end }}

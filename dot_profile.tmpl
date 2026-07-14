@@ -27,6 +27,11 @@ source ~/.shell/env/common.sh
 [ -f ~/.shell/env/enapi.sh ] && source ~/.shell/env/enapi.sh
 {{- end }}
 
+{{ if eq .hostname "raichu" -}}
+# raichu: persistent ssh-agent + 1Password key
+[ -f ~/.shell/env/raichu.sh ] && source ~/.shell/env/raichu.sh
+{{- end }}
+
 # Kube configs
 [ -f ~/.kube/env.sh ] && source ~/.kube/env.sh
 
