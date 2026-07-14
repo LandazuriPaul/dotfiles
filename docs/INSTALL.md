@@ -72,8 +72,9 @@ The Touch ID agent is desktop-only, so a headless host uses a read-only 1Passwor
 
 - Keep the server's key in a dedicated vault (`raichu`) and generate a service
   account scoped read-only to it.
-- Store the token as a `raichu-service-account` Password item in the Landázuri
-  `Private` vault; chezmoi renders it to `~/.config/op/raichu.token` (`0600`,
+- Store the token as a `raichu-service-account` credential item in the Landázuri
+  `Private` vault, with the token saved under a secret field name `token`.
+  chezmoi renders it to `~/.config/op/raichu.token` (`0600`,
   read via the interactive landázuri session, so no dependency on SSH).
 - On login, `~/.shell/env/raichu.sh` starts a persistent user `ssh-agent` and runs
   `~/.shell/scripts/load-ssh-key`, which pipes the key from 1Password into the
