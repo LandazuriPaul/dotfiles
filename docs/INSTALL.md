@@ -80,6 +80,8 @@ The Touch ID agent is desktop-only, so a headless host uses a read-only 1Passwor
   `~/.shell/scripts/load-ssh-key`, which pipes the key from 1Password into the
   agent (`op read … | ssh-add -`). The key stays in memory only.
 
+For the design rationale and the non-obvious gotchas behind this setup, see [SSH](./SSH.md).
+
 ## Repository
 
 Finally, you can install this repository and apply it using `chezmoi`.
