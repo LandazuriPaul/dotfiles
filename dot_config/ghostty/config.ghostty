@@ -11,13 +11,13 @@ unfocused-split-fill = 222200
 # Quick terminal settings
 quick-terminal-screen = mouse
 quick-terminal-autohide = false
-quick-terminal-size = 100%
+quick-terminal-size = 50%,500px
 
 # Confirm on quit
 confirm-close-surface = always
 
 # Load keybinds
-config-file = keybinds
+config-file = keybinds.ghostty
 
 # Tab settings
 window-new-tab-position = end
