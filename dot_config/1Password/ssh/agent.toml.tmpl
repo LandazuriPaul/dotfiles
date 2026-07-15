@@ -1,4 +1,6 @@
-{{- if eq .hostname "paul-enapi" "blastoise" -}}
+{{ if eq .hostname "blastoise" -}}
 {{ onepasswordRead "op://private/ssh_agent/ssh_agent.toml" .onepassword.landazuri }}
+{{- end }}
+{{ if eq .hostname "paul-enapi" "blastoise" -}}
 {{ onepasswordRead "op://private/ssh_agent/ssh_agent.toml" .onepassword.enapi }}
 {{- end }}

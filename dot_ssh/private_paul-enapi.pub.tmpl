@@ -1,0 +1,3 @@
+{{- if eq .hostname "paul-enapi" -}}
+{{ onepasswordRead "op://private/enapi-ssh-key/public_key" .onepassword.enapi }}
+{{- end }}
