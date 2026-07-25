@@ -1,0 +1,8 @@
+{
+  "defaultProvider": "openrouter",
+  "defaultModel": "google/gemini-3.5-flash",
+  "enabledModels": [
+    "anthropic/claude-*",
+    "google/gemini-*"
+  ]
+}
