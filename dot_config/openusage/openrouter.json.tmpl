@@ -1,4 +1,4 @@
-{{- if eq .hostname "blastoise" "raichu" -}}
+{{- if eq .hostname "blastoise" -}}
 {
   "apiKey": "{{ onepasswordRead "op://private/OpenRouter - OpenUsage/token" .onepassword.landazuri }}"
 }
