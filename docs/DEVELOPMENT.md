@@ -104,3 +104,7 @@ brew install font-fira-code
 ## TablePlus
 
 [TablePlus](https://tableplus.com/) is a friendly GUI for relational databases.
+
+## AI Tools
+
+[OpenUsage](https://www.openusage.ai/) is a macOS menu bar app that provides AI subscriptions tracking.
