@@ -1,6 +1,8 @@
+{{- if eq .hostname "blastoise" "raichu" -}}
 {
   "openrouter": {
     "type": "api",
     "key": "{{ onepasswordRead "op://private/OpenRouter - OpenCode/token" .onepassword.landazuri }}"
   }
 }
+{{- end }}
