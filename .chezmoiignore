@@ -6,3 +6,7 @@ docs/
 # IDEs
 .idea/
 .vscode/
+
+# SQLite DB files
+**/*.db
+**/*.db-*
