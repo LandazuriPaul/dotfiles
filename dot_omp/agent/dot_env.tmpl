@@ -1,0 +1,3 @@
+{{- if eq .hostname "blastoise" "raichu" -}}
+OPENROUTER_API_KEY={{ onepasswordRead "op://private/OpenRouter - Oh My Pi/token" .onepassword.landazuri }}
+{{- end }}

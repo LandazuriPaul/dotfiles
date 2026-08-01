@@ -1,0 +1,9 @@
+providers:
+  webSearchOrder:
+    []
+modelRoles:
+  default: openrouter/google/gemini-3.5-flash
+symbolPreset: nerd
+theme:
+  dark: titanium
+setupVersion: 1
