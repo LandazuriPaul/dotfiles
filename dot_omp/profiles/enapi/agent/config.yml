@@ -1,0 +1,9 @@
+providers:
+  webSearchOrder:
+    []
+modelRoles:
+  default: anthropic/claude-opus-5
+symbolPreset: nerd
+theme:
+  dark: titanium
+setupVersion: 1
