@@ -12,7 +12,7 @@ modelRoles:
 symbolPreset: nerd
 defaultThinkingLevel: auto
 theme:
-  dark: titanium
+  dark: dark-abyss
 setupVersion: 1
 display:
   showTokenUsage: false

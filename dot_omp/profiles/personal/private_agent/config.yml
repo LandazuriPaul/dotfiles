@@ -8,7 +8,7 @@ modelRoles:
 symbolPreset: nerd
 defaultThinkingLevel: auto
 theme:
-  dark: titanium
+  dark: anthracite
 setupVersion: 1
 display:
   showTokenUsage: false
