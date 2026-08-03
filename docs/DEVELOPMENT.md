@@ -50,6 +50,27 @@ Install Ghostty from the official website: [https://ghostty.org/](https://ghostt
 
 The configuration is saved under the [.config/ghostty](/dot_config/ghostty/) directory.
 
+## cmux
+
+[cmux](https://cmux.com/) is a terminal multiplexer for coding agents.
+
+### Agent Hooks Setup
+
+See the official documentation to install the agent hooks so that cmux can integrate with the coding agent.
+It's particularly useful to get notifications when an agent is waiting for user input and to get its status reported in the app.
+
+#### Oh My Pi (omp)
+
+The [official documentation](https://cmux.com/docs/agent-integrations/oh-my-pi)'s command installs the hook in omp's default profile, under `~/.omp/agent`.
+
+To install the extension in a specific profile, use:
+
+```bash
+PI_CODING_AGENT_DIR="$HOME/.omp/profiles/<profile_name>/agent" cmux hooks omp install
+```
+
+This can be run again to update the hook when required.
+
 ## iTerm2
 
 ### Preferences
