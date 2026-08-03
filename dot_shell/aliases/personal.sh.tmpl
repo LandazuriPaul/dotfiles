@@ -2,9 +2,9 @@
 ### generic aliases
 
 # Oh My Pi personal profile
-alias ompp="omp --profile=personal"
+alias ompp='omp --profile=personal'
 
-{{- if eq .hostname "blastoise" -}}
+{{ if eq .hostname "blastoise" -}}
 # magick (for PhotoLab output conversion to HEIC)
 alias magick-heic='magick mogrify -format heic -depth 10 -path .. -delete 1,1 *.tif'
 {{- end }}
