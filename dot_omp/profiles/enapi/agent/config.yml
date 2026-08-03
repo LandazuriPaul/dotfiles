@@ -2,8 +2,25 @@ providers:
   webSearchOrder:
     []
 modelRoles:
-  default: anthropic/claude-opus-5
+  default: anthropic/claude-opus-4-8
+  smol: anthropic/claude-sonnet-5
+  slow: anthropic/claude-opus-5
+  plan: anthropic/claude-opus-5:high
+  commit: google-antigravity/gemini-3.1-flash-lite
+  tiny: google-antigravity/gemini-3.1-flash-lite
+  designer: anthropic/claude-opus-5
 symbolPreset: nerd
+defaultThinkingLevel: auto
 theme:
   dark: titanium
 setupVersion: 1
+display:
+  showTokenUsage: false
+todo:
+  enabled: true
+advisor:
+  enabled: true
+prewalk:
+  enabled: true
+tools:
+  approvalMode: write

@@ -3,7 +3,20 @@ providers:
     []
 modelRoles:
   default: openrouter/google/gemini-3.5-flash
+  commit: openrouter/google/gemini-3.1-flash-lite
+  tiny: openrouter/google/gemini-3.1-flash-lite
 symbolPreset: nerd
+defaultThinkingLevel: auto
 theme:
   dark: titanium
 setupVersion: 1
+display:
+  showTokenUsage: false
+todo:
+  enabled: true
+advisor:
+  enabled: true
+prewalk:
+  enabled: true
+tools:
+  approvalMode: write
