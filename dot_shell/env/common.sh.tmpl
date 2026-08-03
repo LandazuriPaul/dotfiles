@@ -12,3 +12,15 @@ export PATH="$HOME/.shell/exec:$PATH"
 # Terragrunt
 export TG_PROVIDER_CACHE=1
 export TG_PROVIDER_CACHE_DIR="$HOME/.cache/terragrunt"
+
+# ---
+# --- AI tooling
+# ---
+
+# Oh My Pi: default profile for this machine, so a bare `omp` picks up the
+# right identity without a separate "default" profile in ~/.omp/agent.
+{{- $ompProfile := "personal" }}
+{{- if eq .hostname "paul-enapi" }}
+{{-   $ompProfile = "enapi" }}
+{{- end }}
+export OMP_PROFILE="{{ $ompProfile }}"

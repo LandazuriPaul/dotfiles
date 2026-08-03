@@ -1,3 +1,7 @@
 {{- if eq .hostname "paul-enapi" "blastoise" -}}
+# Oh My Pi ENAPI profile
+alias ompe="omp --profile=enapi"
+
+# Sensitive aliases
 {{ onepasswordRead "op://private/shell_aliases/shell_aliases.sh" .onepassword.enapi }}
 {{- end }}
