@@ -1,7 +1,7 @@
 # SSH Keys
 
-SSH keys are stored in 1Password (Landázuri account), one per machine, and are
-never written to disk in plaintext. `INSTALL.md` has the from-scratch setup
+SSH keys are stored in 1Password, one per machine, and are
+never written to disk in plaintext. [`INSTALL.md`](./INSTALL.md) has the from-scratch setup
 steps; this document records **why** it's built this way and the **non-obvious
 gotchas** behind the odd-looking choices.
 
@@ -27,7 +27,7 @@ Trade-off, accepted deliberately: the service-account token is a real secret on
 disk. A headless host that must work unattended can't be Touch-ID-gated, so the
 goal shifts from "no usable secret on disk" to "one **scoped, revocable,
 auditable** secret, with the key never persisted." The token grants read of the
-`raichu` vault only, and is itself managed from 1Password (see `INSTALL.md`).
+`raichu` vault only, and is itself managed from 1Password (see [`INSTALL.md`](./INSTALL.md)).
 
 The load happens at login, so it covers interactive sessions and persists across
 them. A cron job that must run **after a reboot with no prior login** would not
@@ -37,12 +37,10 @@ have the agent yet — that would need a systemd **user** `ssh-agent` service pl
 ## Gotchas (the reasons behind the weird bits)
 
 - **Identify accounts by UUID, not sign-in address.** Two accounts share
-  `my.1password.com`, so the address is ambiguous. See `PASSWORD_MANAGERS.md`.
+  `my.1password.com`, so the address is ambiguous. See [`PASSWORD_MANAGERS.md`](./PASSWORD_MANAGERS.md).
 
 - **Reference 1Password fields by ID, not label.** The desktop app localises
-  field *labels* (a French app stores the SSH private key as `clé privée`), and
-  secret references are ASCII-only — an accented label can't even be typed in a
-  reference. Field **IDs** stay English/stable: use `private_key`, `public_key`.
+  field *labels*, field **IDs** stay English/stable: use `private_key`, `public_key`.
   Append `?ssh-format=openssh` when piping to `ssh-add`. If unsure of an ID:
   `op item get <item> --format json | jq '.fields[] | {id,label}'`.
 
