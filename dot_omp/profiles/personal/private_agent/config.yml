@@ -9,7 +9,7 @@ symbolPreset: nerd
 defaultThinkingLevel: auto
 theme:
   dark: anthracite
-setupVersion: 1
+setupVersion: 2
 display:
   showTokenUsage: false
 todo:
@@ -20,3 +20,5 @@ prewalk:
   enabled: true
 tools:
   approvalMode: write
+composer:
+  shape: rule
