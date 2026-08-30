@@ -2,7 +2,7 @@ providers:
   webSearchOrder:
     []
 modelRoles:
-  default: openrouter/google/gemini-3.5-flash
+  default: openrouter/google/gemini-3.7-flash
   commit: openrouter/google/gemini-3.1-flash-lite
   tiny: openrouter/google/gemini-3.1-flash-lite
 symbolPreset: nerd
