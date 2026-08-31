@@ -13,7 +13,7 @@ symbolPreset: nerd
 defaultThinkingLevel: auto
 theme:
   dark: dark-abyss
-setupVersion: 1
+setupVersion: 2
 display:
   showTokenUsage: false
 todo:
@@ -23,4 +23,10 @@ advisor:
 prewalk:
   enabled: true
 tools:
-  approvalMode: write
+  approvalMode: yolo
+composer:
+  shape: rule
+dev:
+  autoqaConsent: granted
+hideThinkingBlock: true
+includeWorkspaceTree: true
