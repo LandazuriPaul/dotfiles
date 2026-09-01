@@ -10,6 +10,11 @@ source ~/.shell/integrations/common.sh
 # Load local integrations
 [ -f ~/.shell/integrations/local.sh ] && source ~/.shell/integrations/local.sh
 
+{{ if eq .hostname "paul-enapi" "blastoise" -}}
+# ENAPI
+[ -f ~/.shell/integrations/enapi.sh ] && source ~/.shell/integrations/enapi.sh
+{{- end }}
+
 # ---
 # --- Environment variables
 # ---
