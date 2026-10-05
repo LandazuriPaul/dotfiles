@@ -2,13 +2,13 @@ providers:
   webSearchOrder:
     []
 modelRoles:
-  default: anthropic/claude-opus-4-8
+  default: anthropic/claude-opus-5-5
   smol: anthropic/claude-sonnet-5
-  slow: anthropic/claude-opus-5
-  plan: anthropic/claude-opus-5:high
+  slow: anthropic/claude-opus-5-5
+  plan: anthropic/claude-opus-5-5
   commit: google-antigravity/gemini-3.1-flash-lite
   tiny: google-antigravity/gemini-3.1-flash-lite
-  designer: anthropic/claude-opus-5
+  designer: anthropic/claude-opus-5-5
 symbolPreset: nerd
 defaultThinkingLevel: auto
 theme:
