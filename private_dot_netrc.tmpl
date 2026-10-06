@@ -1,0 +1,5 @@
+{{- if eq .hostname "paul-enapi" "blastoise" -}}
+machine buf.build
+  login {{ onepasswordRead "op://private/paul-enapi-bsr-token/username" .onepassword.enapi }}
+  password {{ onepasswordRead "op://private/paul-enapi-bsr-token/token" .onepassword.enapi }}
+{{- end }}
