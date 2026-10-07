@@ -1,0 +1,3 @@
+{{- if eq .hostname "paul-enapi" "blastoise" -}}
+//buf.build/gen/npm/v1/:_authToken={{ onepasswordRead "op://private/paul-enapi-bsr-token/token" .onepassword.enapi }}
+{{- end }}
