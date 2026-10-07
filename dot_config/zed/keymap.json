@@ -10,8 +10,8 @@
     "bindings": {
       "cmd-d": "editor::DuplicateSelection",
       "cmd-shift-w": null,
-      "fn-escape": "window::ShowNextWindowTab",
-      "fn-shift-escape": "window::ShowPreviousWindowTab",
+      "alt-escape": "window::ShowNextWindowTab",
+      "alt-shift-escape": "window::ShowPreviousWindowTab",
     },
   },
   {
