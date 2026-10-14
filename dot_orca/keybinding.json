@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "keybindings": {},
+  "platforms": {
+    "darwin": {
+      "app.settings": [
+        "Mod+Comma"
+      ],
+      "sidebar.right.toggle": [
+        "Mod+R"
+      ],
+      "sidebar.sourceControl.toggle": [
+        "Mod+Shift+C"
+      ]
+    },
+    "linux": {},
+    "win32": {}
+  }
+}
