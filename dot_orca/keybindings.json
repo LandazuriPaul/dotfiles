@@ -3,15 +3,10 @@
   "keybindings": {},
   "platforms": {
     "darwin": {
-      "app.settings": [
-        "Mod+Comma"
-      ],
-      "sidebar.right.toggle": [
-        "Mod+R"
-      ],
-      "sidebar.sourceControl.toggle": [
-        "Mod+Shift+C"
-      ]
+      "app.settings": ["Mod+Comma"],
+      "sidebar.right.toggle": ["Mod+R"],
+      "sidebar.sourceControl.toggle": ["Mod+Shift+C"],
+      "fileExplorer.copyRelativePath": ["Mod+Alt+Shift+C", "Mod+Shift+C"]
     },
     "linux": {},
     "win32": {}
