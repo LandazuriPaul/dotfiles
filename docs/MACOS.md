@@ -80,6 +80,12 @@ sudo ln -sfn "$HOME/.colima/default/docker.sock" /var/run/docker.sock
 
 The symlink survives reboots and Colima restarts.
 
+### MacDirStat
+
+An Open Source tool to analyze your disk and check what is taking up space.
+
+See the [GitHub page](https://github.com/phalladar/MacDirStat).
+
 ### VLC
 
 To be able to run multiple instances of VLC at the same time, save the below code as a new app (e.g. `VLC droplet.app`) via the AppleScript Editor:
