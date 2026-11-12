@@ -77,7 +77,7 @@ The Touch ID agent is desktop-only, so a headless host uses a read-only 1Passwor
   chezmoi renders it to `~/.config/op/raichu.token` (`0600`,
   read via the interactive landázuri session, so no dependency on SSH).
 - On login, `~/.shell/env/raichu.sh` starts a persistent user `ssh-agent` and runs
-  `~/.shell/scripts/load-ssh-key`, which pipes the key from 1Password into the
+  `~/.shell/scripts/load-ssh-key.sh`, which pipes the key from 1Password into the
   agent (`op read … | ssh-add -`). The key stays in memory only.
 
 For the design rationale and the non-obvious gotchas behind this setup, see [SSH](./SSH.md).

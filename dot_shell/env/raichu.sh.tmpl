@@ -12,7 +12,7 @@ export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/ssh-agent.socket"
 ssh-add -l >/dev/null 2>&1
 case $? in
     0) ;;                                    # a key is already loaded — done
-    1) ~/.shell/scripts/load-ssh-key ;;      # agent running but empty — load the key
+    1) ~/.shell/scripts/load-ssh-key.sh ;;   # agent running but empty — load the key
     2)                                       # no/stale agent — (re)start it, then load
         rm -f "$SSH_AUTH_SOCK"
         ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null 2>&1
