@@ -5,7 +5,7 @@ echo "> Log in to 1Password (Landázuri)"
 eval $(op signin --account {{ .onepassword.landazuri }})
 {{- end }}
 
-{{ if eq .hostname "blastoise" "raichu" -}}
+{{ if eq .hostname "blastoise" -}}
 echo "> Log in to 1Password (MyFoodCourt)"
 eval $(op signin --account {{ .onepassword.mfc }})
 {{- end }}
