@@ -48,10 +48,6 @@ brew install mise       # Linux
 - `git` on macOS: Apple's (from the Xcode command line tools) works but lags
   behind. On Linux, apt's `git` is already installed above.
 
-No `gcc` or `gpg` from Homebrew: bottles are prebuilt, so there's nothing to
-compile (the Xcode tools and `build-essential` cover the rare exception), and
-nothing here uses `gpg` (no signed commits; Ubuntu ships it for apt anyway).
-
 #### What not to install with Homebrew or mise
 
 Homebrew and mise install files owned by **your user**. That's fine for tools
