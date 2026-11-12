@@ -4,33 +4,42 @@ You can follow these instructions to install this repository on a brand-new mach
 
 ## Prerequisites
 
+### Hostname
+
+The templates pick what to render from the hostname (`blastoise`, `raichu`,
+…), so set it **before** initialising the repository, or the host-specific
+files are silently skipped:
+
+```shell
+sudo hostnamectl set-hostname <hostname>   # Linux
+```
+
+### System packages (Linux)
+
+Homebrew's build requirements, plus `zsh` (macOS already ships it):
+
+```shell
+sudo apt-get install build-essential procps curl file git zsh
+```
+
 ### Homebrew
 
 The Homebrew package manager allows to install recent versions of useful tools.
-See [official instructions](https://brew.sh/).
+See [official instructions](https://brew.sh/). On Linux this is the same
+project (formerly Linuxbrew), installed under `/home/linuxbrew/.linuxbrew`.
 
-If indicated, follow the post-installation recommendations (except the `.zshrc` updates) for Linux:
+Skip the post-installation `.zshrc` updates: the dotfiles' `.zshrc` already
+loads Homebrew. They aren't installed yet, so load it in the current shell:
+
 ```shell
-sudo apt-get install build-essential
+eval "$(/opt/homebrew/bin/brew shellenv)"              # macOS
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # Linux
 ```
 
-### ZSH
-
-- Install `zsh`:
-  - Linux (Debian/Ubuntu):
-    ```shell
-    sudo apt-get install zsh
-    ```
-  
-  - macOS:
-    ```shell
-    brew install zsh
-    ```
-  
-- Set `zsh` as your default shell:
-  ```shell
-  chsh -s /bin/zsh
-  ```
+Don't use Homebrew (or mise) for anything that runs as root, like
+`tailscaled`: their files are owned by your user, so whoever controls your
+account could replace a binary that root then runs. Use the system packages
+(apt) or the vendor's installer instead.
 
 ### Dependencies
 
@@ -84,24 +93,67 @@ For the design rationale and the non-obvious gotchas behind this setup, see [SSH
 
 ## Repository
 
-Finally, you can install this repository and apply it using `chezmoi`.
+`chezmoi` and the 1Password CLI (`op`) are only installed by `mise install`,
+whose config comes from this repository, but the templates need `op` to
+render. Bootstrap them in a temporary shell instead:
 
 ```shell
-chezmoi init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
+mise exec chezmoi@latest 1password-cli@latest -- bash
 ```
 
-Once you have run this command, the `dotfiles` should be installed.
+In that shell:
+
+1. Make your 1Password accounts available to `op`:
+   - Laptop: 1Password → Settings → Developer → "Integrate with 1Password CLI".
+   - Server (no desktop app): add the Landázuri account only:
+     ```shell
+     op account add
+     ```
+2. Sign in to the Landázuri account (its UUID is in the `USER ID` column of
+   `op account list`):
+   ```shell
+   eval "$(op signin --account <landazuri-uuid>)"
+   ```
+   On a laptop, sign in to the other accounts the same way (or wait for
+   `cm-login.sh`, available once the repository is applied).
+3. Initialise and apply the repository. It's public, so clone it over HTTPS:
+   no SSH key is loaded yet, since the key setup comes from this repository.
+   ```shell
+   chezmoi init --apply LandazuriPaul
+   ```
+   It prompts once for each 1Password account UUID (see
+   [PASSWORD_MANAGERS](./PASSWORD_MANAGERS.md)). On a server, leave the
+   accounts it doesn't use empty.
+4. `exit` the temporary shell.
+
+To push changes later, switch the remote to SSH once the machine's key works:
+
+```shell
+chezmoi git -- remote set-url origin git@github.com:LandazuriPaul/dotfiles.git
+```
 
 ## Tool Installation
 
-With `mise` installed and its configuration available with the above dotfiles initialisation, you can install the remaining dependencies with the below command.
-You can check and change them in [mise.toml](../dot_config/mise/config.toml):
+Start a new `zsh` session, which now activates `mise` with the dotfiles'
+config, and install the tools. You can check and change them in
+[config.toml.tmpl](../dot_config/mise/config.toml.tmpl) (`raichu` only gets
+the basic ones):
 
 ```shell
+zsh
 mise install
 ```
 
-Now your terminal is fully ready and you can just launch a new session, you're good to go!
+## Default shell (Linux)
+
+Last, once `zsh` is fully configured, make it your login shell (macOS already
+defaults to `zsh`):
+
+```shell
+chsh -s /usr/bin/zsh
+```
+
+Log out and back in, and you're good to go!
 
 ---
 
@@ -111,4 +163,3 @@ Once you have all of these tools installed, you can complete your installation w
 
 - [DEVELOPMENT](./DEVELOPMENT.md): For development tools.
 - [UTILITIES](./UTILITIES.md): For other utility applications.
-- [USEFUL_COMMANDS](./USEFUL_COMMANDS.md): For other useful commands.

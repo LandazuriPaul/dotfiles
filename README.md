@@ -15,5 +15,4 @@ See the [docs](./docs/) directory for some documentation:
 - [MACOS](./docs/MACOS.md): For macOS-specific settings and commands.
 - [RAYCAST](./docs/RAYCAST.md): For Raycast-specific settings.
 - [UTILITIES](./docs/UTILITIES.md): For utilities installations.
-- [USEFUL_COMMANDS](./docs/USEFUL_COMMANDS.md): For random but useful commands.
 - [ZEN](./docs/ZEN_BROWSER.md): For Zen browser instructions.
