@@ -36,11 +36,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"              # macOS
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # Linux
 ```
 
-Don't use Homebrew (or mise) for anything that runs as root, like
-`tailscaled`: their files are owned by your user, so whoever controls your
-account could replace a binary that root then runs. Use the system packages
-(apt) or the vendor's installer instead.
-
 ### Dependencies
 
 Some dependencies:
@@ -52,6 +47,32 @@ brew install git gcc gpg mise
 Explanations:
 - `git`, `gcc` and `gpg` might be already installed, but `brew` has access to more recent versions and uses them internally.
 - `mise` is a tool version manager and much more. See [mise website](https://mise.jdx.dev).
+
+#### What not to install with Homebrew or mise
+
+Homebrew and mise install files owned by **your user**. That's fine for tools
+you run yourself, but not for anything that runs as **root** (a system
+service, a privileged helper): whoever gets into your account could replace
+that binary, and root would then run their code. Install those with the
+system package manager (apt), the vendor's own installer or package (`.dmg`,
+`.pkg`, apt repository), so the files are root-owned and updates come from
+the OS or the vendor.
+
+Don't install these with Homebrew or mise:
+
+- **Tailscale**: `tailscaled` runs as root. macOS: the `.dmg` from
+  tailscale.com (updates from its UI). Linux: Tailscale's apt repository
+  (`curl -fsSL https://tailscale.com/install.sh | sh` sets it up).
+- **Docker Engine on Linux**: `dockerd` runs as root. Use Docker's apt
+  repository. The `docker` CLI on its own is fine with mise.
+- **Lima's `socket_vmnet`** (macOS): Lima's root network helper, only needed
+  for its `vmnet` networks. Lima's docs require a root-owned copy, never
+  Homebrew's. Not used here: Colima runs with `vmType: vz` and needs no root
+  helper.
+
+Fine with mise: Colima, Lima and the Docker CLI on macOS. They run as your
+user, and the Docker daemon runs as root only inside Colima's VM, not on
+the Mac.
 
 
 ### Password Managers
