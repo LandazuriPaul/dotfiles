@@ -169,6 +169,20 @@ zsh
 mise install
 ```
 
+The first `zsh` may fail to install its plugins, and that's expected. zinit
+clones them from `https://github.com/…`, which `.gitconfig` rewrites to SSH,
+but on a server the SSH key is only loaded later in that same startup
+(`~/.profile` starts the agent). The plugins need the key, and the key needs
+the shell to finish starting. Once it has, start a fresh one, which inherits
+the now-loaded agent, and the clones succeed:
+
+```shell
+exec zsh
+```
+
+Accept GitHub's host key if SSH asks. The plugins are only cloned once, so
+this happens only on the first setup.
+
 ## Default shell (Linux)
 
 Last, once `zsh` is fully configured, make it your login shell (macOS already
