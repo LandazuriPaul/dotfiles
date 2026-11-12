@@ -155,29 +155,34 @@ chezmoi git -- remote set-url origin git@github.com:LandazuriPaul/dotfiles.git
 
 ## Tool Installation
 
-Start a new `zsh` session, which now activates `mise` with the dotfiles'
-config, and install the tools. You can check and change them in
+Install the tools first: `op` (the 1Password CLI) is one of them, and the
+shell needs it to load a server's SSH key. You can check and change them in
 [config.toml.tmpl](../dot_config/mise/config.toml.tmpl) (`raichu` only gets
 the basic ones):
 
 ```shell
-zsh
 mise install
 ```
 
-The first `zsh` may fail to install its plugins, and that's expected. zinit
-clones them from `https://github.com/…`, which `.gitconfig` rewrites to SSH,
-but on a server the SSH key is only loaded later in that same startup
-(`~/.profile` starts the agent). The plugins need the key, and the key needs
-the shell to finish starting. Once it has, start a fresh one, which inherits
-the now-loaded agent, and the clones succeed:
+The machine's SSH key must be authorized on GitHub (see [SSH Key](#ssh-key)):
+`.gitconfig` rewrites `https://github.com/…` to SSH, so every GitHub clone
+and `chezmoi update` goes through it.
+
+Then start `zsh`. The first one fails to install its plugins, and that's
+expected: zinit clones them at the top of `.zshrc`, but on a server the SSH
+key is only loaded at the end of that same startup (`~/.profile` starts the
+agent). The plugins need the key, and the key needs the shell to finish
+starting. Once it has, replace it with a fresh one, which inherits the
+now-loaded agent, and the clones succeed:
 
 ```shell
+zsh
+ssh-add -l               # the key is loaded
+ssh -T git@github.com    # GitHub accepts it; accept its host key if asked
 exec zsh
 ```
 
-Accept GitHub's host key if SSH asks. The plugins are only cloned once, so
-this happens only on the first setup.
+The plugins are only cloned once, so this happens only on the first setup.
 
 ## Default shell (Linux)
 
