@@ -17,11 +17,6 @@ source ~/.shell/env/common.sh
 [ -f ~/.shell/env/enapi.sh ] && source ~/.shell/env/enapi.sh
 {{- end }}
 
-{{ if eq .hostname "raichu" -}}
-# raichu: persistent ssh-agent + 1Password key
-[ -f ~/.shell/env/raichu.sh ] && source ~/.shell/env/raichu.sh
-{{- end }}
-
 # Kube configs
 [ -f ~/.kube/env.sh ] && source ~/.kube/env.sh
 
@@ -37,6 +32,12 @@ source ~/.shell/env/common.sh
 
 # Load common integrations
 source ~/.shell/integrations/common.sh
+
+{{ if eq .hostname "raichu" -}}
+# raichu: persistent ssh-agent + 1Password key. After the integrations: it
+# needs `op`, which mise only puts on the PATH once activated.
+[ -f ~/.shell/env/raichu.sh ] && source ~/.shell/env/raichu.sh
+{{- end }}
 
 {{ if eq .hostname "paul-enapi" "blastoise" -}}
 # ENAPI
