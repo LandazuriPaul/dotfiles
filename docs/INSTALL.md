@@ -38,15 +38,19 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # Linux
 
 ### Dependencies
 
-Some dependencies:
-
 ```shell
-brew install git gcc gpg mise
+brew install git mise   # macOS
+brew install mise       # Linux
 ```
 
-Explanations:
-- `git`, `gcc` and `gpg` might be already installed, but `brew` has access to more recent versions and uses them internally.
-- `mise` is a tool version manager and much more. See [mise website](https://mise.jdx.dev).
+- `mise` is a tool version manager and much more (see [mise website](https://mise.jdx.dev)):
+  it installs every other tool, from [config.toml.tmpl](../dot_config/mise/config.toml.tmpl).
+- `git` on macOS: Apple's (from the Xcode command line tools) works but lags
+  behind. On Linux, apt's `git` is already installed above.
+
+No `gcc` or `gpg` from Homebrew: bottles are prebuilt, so there's nothing to
+compile (the Xcode tools and `build-essential` cover the rare exception), and
+nothing here uses `gpg` (no signed commits; Ubuntu ships it for apt anyway).
 
 #### What not to install with Homebrew or mise
 
