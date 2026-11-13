@@ -25,12 +25,15 @@ zoxide = "latest"
 # Password Managers
 1password-cli = "latest"
 
+# Kubernetes: k9s also on raichu, to inspect its own cluster (its kubeconfig
+# is already there, and k9s runs as your user, like kubectl)
+k9s = "latest"
+
 {{ if ne .hostname "raichu" -}}
 # Everything below stays off raichu: it faces the internet, so it only gets
-# the basics above (1password-cli loads its SSH key).
+# the basics above (1password-cli loads its SSH key, k9s views its cluster).
 
 # Kubernetes
-k9s = "latest"
 kubectl = "latest"
 kubeswitch = "latest"
 stern = "latest"
