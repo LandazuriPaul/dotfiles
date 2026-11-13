@@ -1,3 +1,6 @@
 {{- if eq .hostname "blastoise" "paul-enapi" -}}
 {{ onepasswordRead "op://private/raichu_kubeconfig/raichu_kubeconfig.yaml" .onepassword.landazuri }}
+{{- else if eq .hostname "raichu" -}}
+{{/* Points at 127.0.0.1, so kubectl on raichu doesn't depend on Tailscale. */ -}}
+{{ onepasswordRead "op://private/raichu_local_kubeconfig/raichu_local_kubeconfig.yaml" .onepassword.landazuri }}
 {{- end }}
