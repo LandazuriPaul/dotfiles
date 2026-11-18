@@ -1,4 +1,7 @@
 {{- if eq .chezmoi.os "darwin" -}}
 # GNU implementations
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# Docker Desktop CLI tools (docker, docker-credential-desktop, kubectl), installed per user
+export PATH="$PATH:$HOME/.docker/bin"
 {{- end }}

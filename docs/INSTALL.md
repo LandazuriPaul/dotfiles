@@ -65,14 +65,10 @@ Don't install these with Homebrew or mise:
   (`curl -fsSL https://tailscale.com/install.sh | sh` sets it up).
 - **Docker Engine on Linux**: `dockerd` runs as root. Use Docker's apt
   repository. The `docker` CLI on its own is fine with mise.
-- **Lima's `socket_vmnet`** (macOS): Lima's root network helper, only needed
-  for its `vmnet` networks. Lima's docs require a root-owned copy, never
-  Homebrew's. Not used here: Colima runs with `vmType: vz` and needs no root
-  helper.
-
-Fine with mise: Colima, Lima and the Docker CLI on macOS. They run as your
-user, and the Docker daemon runs as root only inside Colima's VM, not on
-the Mac.
+- **Docker Desktop** (macOS): its privileged helper runs as root. Use the
+  `.dmg` from docker.com and let Docker Desktop update itself. It also ships
+  the `docker` CLI and its plugins, so don't install those with mise on
+  macOS either.
 
 
 ### Password Managers

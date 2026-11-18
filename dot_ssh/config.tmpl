@@ -1,7 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
-Include ~/.colima/ssh_config
-{{- end }}
-
 {{ if eq .hostname "paul-enapi" "blastoise" -}}
 {{ onepasswordRead "op://private/ssh_config/ssh_config.sh" .onepassword.enapi }}
 {{ onepasswordRead "op://private/ssh_config/ssh_config.sh" .onepassword.landazuri }}

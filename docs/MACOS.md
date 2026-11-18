@@ -62,23 +62,21 @@ Then you can assign a shortcut to this service in the System Preferences > Keybo
 
 ## Apps
 
-### Docker and Colima Integration
+### Docker Desktop
 
-I don't use Docker Desktop, but rather Colima (see [config.toml](../dot_config/mise/config.toml)).
+Docker Desktop provides the Docker daemon, the `docker` CLI and its plugins
+(`compose`, `buildx`). Install it from the `.dmg` on
+[docker.com](https://www.docker.com/products/docker-desktop/), not Homebrew or
+mise (see [INSTALL](./INSTALL.md)), and let it update itself.
 
-To start the Colima VM, run:
+After the first start:
 
-```bash
-colima start
-```
-
-Colima exposes its socket at `~/.colima/default/docker.sock` and registers a Docker context for it, so `docker`, `docker compose`, Dozzle, and Testcontainers all work out of the box. Host-side tools that hard-code `/var/run/docker.sock` (e.g. `dtop`, some `lazydocker` configs) need the legacy path Docker Desktop used to provide. Recreate it once with:
-
-```bash
-sudo ln -sfn "$HOME/.colima/default/docker.sock" /var/run/docker.sock
-```
-
-The symlink survives reboots and Colima restarts.
+- Select its context: `docker context use desktop-linux`.
+- In Settings > Advanced, enable "Allow the default Docker socket to be used",
+  so tools that hard-code `/var/run/docker.sock` (Dozzle, `dtop`,
+  Testcontainers) find the daemon.
+- In Settings > Resources, give the VM enough CPU, memory and disk for local
+  stacks (e.g. 6 CPUs, 12 GB memory, 80 GB disk).
 
 ### MacDirStat
 
